@@ -2,17 +2,20 @@ import React, { useEffect } from 'react';
 
 const Home = () => {
     useEffect(() => {
-        // Динамічне завантаження скрипту Spine Player
+
         const script = document.createElement('script');
-        script.src = "https://esotericsoftware.com/files/spine-player/4.1/spine-player.js";
+        script.src = "https://unpkg.com/@esotericsoftware/spine-player@4.1.*/dist/iife/spine-player.js";
+
+
+
         script.async = true;
 
         script.onload = () => {
-            console.log('Spine Player loaded'); // Для перевірки завантаження скрипту
+
             const player = new window.spine.SpinePlayer('spine-container', {
-                jsonUrl: `${process.env.PUBLIC_URL}/img/skeleton.json`,
-                atlasUrl: `${process.env.PUBLIC_URL}/img/main_tree.atlas`,
-                animation: 'run',
+                jsonUrl: `/img/skeleton.json`,
+                atlasUrl: `/img/main_tree.atlas`,
+                animation: 'animation',
                 alpha: true,
                 loop: true,
                 autoplay: true,
@@ -23,7 +26,7 @@ const Home = () => {
 
         document.body.appendChild(script);
 
-        // Очищення при демонтажі компонента
+
         return () => {
             if (script) {
                 document.body.removeChild(script);
@@ -33,8 +36,8 @@ const Home = () => {
 
     return (
         <>
-            <p>Edeko</p>
-            <div id="spine-container" style={{ width: '100vw', height: '100vh' }}></div>
+
+            <div id="spine-container" className='bg-purple w-full h-full' ></div>
 
         </>
     );

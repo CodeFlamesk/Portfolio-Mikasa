@@ -22,6 +22,8 @@
   .menuSelect {
     @apply text-sm font-semibold;
   }
+
+
 }
 
 @layer utilities {}
