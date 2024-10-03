@@ -1,31 +1,41 @@
-
-
-
+import React, { useEffect } from 'react';
 
 const Home = () => {
-    const anim = lottie
+    useEffect(() => {
+        // Динамічне завантаження скрипту Spine Player
+        const script = document.createElement('script');
+        script.src = "https://esotericsoftware.com/files/spine-player/4.1/spine-player.js";
+        script.async = true;
 
+        script.onload = () => {
+            console.log('Spine Player loaded'); // Для перевірки завантаження скрипту
+            const player = new window.spine.SpinePlayer('spine-container', {
+                jsonUrl: `${process.env.PUBLIC_URL}/skeleton.json`,
+                atlasUrl: `${process.env.PUBLIC_URL}/main_tree.atlas`,
 
-    anim.loadAnimation({
-        container: document.querySelector('#lottie-test'),
-        renderer: 'canvas',
-        loop: true,
-        autoplay: true,
-        path: './skeleton.json'
-    });
+                animation: 'run',
+                alpha: true,
+                loop: true,
+                autoplay: true,
+                scale: 1.0,
+            });
+        };
+
+        document.body.appendChild(script);
+
+        // Очищення при демонтажі компонента
+        return () => {
+            if (script) {
+                document.body.removeChild(script);
+            }
+        };
+    }, []);
 
     return (
         <>
-            <div id="lottie-test">Lottie</div>
-            <img src="/img/Fone2.jpg" alt="3" className="w-full h-full cobject-cover " />
-
-
-
-
-
-
+            <div id="spine-container" style={{ width: '100vw', height: '100vh' }}></div>
         </>
-    )
-}
+    );
+};
 
 export default Home;
