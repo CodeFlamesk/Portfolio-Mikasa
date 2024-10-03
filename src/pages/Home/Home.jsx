@@ -10,15 +10,15 @@ const Home = () => {
         script.onload = () => {
             console.log('Spine Player loaded'); // Для перевірки завантаження скрипту
             const player = new window.spine.SpinePlayer('spine-container', {
-                jsonUrl: `${process.env.PUBLIC_URL}/skeleton.json`,
-                atlasUrl: `${process.env.PUBLIC_URL}/main_tree.atlas`,
-
+                jsonUrl: `${process.env.PUBLIC_URL}/img/skeleton.json`,
+                atlasUrl: `${process.env.PUBLIC_URL}/img/main_tree.atlas`,
                 animation: 'run',
                 alpha: true,
                 loop: true,
                 autoplay: true,
                 scale: 1.0,
             });
+
         };
 
         document.body.appendChild(script);
@@ -33,7 +33,9 @@ const Home = () => {
 
     return (
         <>
+            <p>Edeko</p>
             <div id="spine-container" style={{ width: '100vw', height: '100vh' }}></div>
+
         </>
     );
 };

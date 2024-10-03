@@ -1,0 +1,10 @@
+main_tree.png
+size:1408,844
+filter:Linear,Linear
+pma:true
+scale:0.7
+PNG/earth_01
+bounds:2,2,1401,172
+PNG/tree_spine_test
+bounds:2,176,956,664
+offsets:0,0,960,664
