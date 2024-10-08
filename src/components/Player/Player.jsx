@@ -2,7 +2,7 @@ import VolumeSeting from "/public/img/volumeSeting";
 import PauseIcon from "/public/img/pauseIcon";
 import PlayIcon from "/public/img/playIcon";
 import { useState, useRef } from "react";
-
+import japanAudio from './music/japan.mp3';
 const AudioPlayer = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [volume, setVolume] = useState(0.2);
@@ -25,7 +25,7 @@ const AudioPlayer = () => {
     return (
         <div>
             <audio ref={audioReff} loop>
-                <source src="./music/japan.mp3" type="audio/mpeg" />
+                <source src={japanAudio} type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
             <div className="controls">
