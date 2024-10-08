@@ -13,7 +13,10 @@ module.exports = {
       lineHeight: {
 
       },
+      transformStyle: {
+        'preserve-3d': 'preserve-3d',
 
+      },
       borderColor: ['focus', 'valid', 'invalid'],
       outlineColor: ['focus', 'valid', 'invalid'],
       screens: {
@@ -35,10 +38,11 @@ module.exports = {
 
     colors: {
 
-      "light-col": "#222222",
-      "purple": "#7247CA",
-      "br-grey": "#EAEAEE"
 
+      "purple": "#A46286",
+      "white": "#FFFFFF",
+      "black": "#000000",
+      "pink": "#F98C96",
 
     },
 

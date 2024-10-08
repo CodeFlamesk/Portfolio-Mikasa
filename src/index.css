@@ -1,16 +1,24 @@
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Oswald:400,500,700&display=swap);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.body {
+html,
+body {
   height: 100%;
 }
 
+@font-face {
+  font-family: 'njfonts';
+  src: url('/fonts/njnaruto.ttf') format('truetype');
+}
+
 @layer base {
+  .njfonts {
+    font-family: 'njfonts', sans-serif;
+  }
+
   body {
-    font-family: 'Source Serif Pro';
+    font-family: 'Source Serif Pro', serif;
     font-weight: 400;
     font-display: swap;
   }
@@ -23,7 +31,210 @@
     @apply text-sm font-semibold;
   }
 
+  .btn {
+    @apply inline-block cursor-pointer justify-center min-w-[259px] lg:min-h-[100px] lg:w-full njfonts text-white border-black bg-purple py-6 px-3 no-select gap-2 text-4xl lg:text-6xl max-w-max border rounded-[17px] relative transition-transform duration-150 ease-in-out;
+    transform-style: preserve-3d;
+  }
 
+  .btn::before {
+    @apply content-[''] absolute border left-0 top-0 w-full h-full bg-[#754C62] border-black rounded-inherit transition-transform duration-150 ease-in-out;
+    transform: translate3d(0, 0.3em, -0.6em);
+  }
+
+  .btn:hover {
+    @apply bg-purple;
+    transform: translateY(0.15em);
+  }
+
+  .btn:hover::before {
+    @apply shadow-[0_0_0_2px_#b18597_0_0.4em_0_0_#ffe3e2] bg-[#754C62];
+    transform: translate3d(0, 0.15em, -0.6em);
+  }
+
+  .btn:active {
+    @apply bg-[#895270];
+    transform: translateY(0.3em);
+  }
+
+  .no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .btn:active::before {
+    @apply shadow-[0_0_0_2px_#b18597_0_0_0_#ffe3e2];
+    transform: translate3d(0, 0, -0.6em);
+  }
+
+  .rounded-inherit {
+    border-radius: inherit;
+  }
+
+  .main-text {
+    @apply text-3xl md:text-4xl 2xl:text-5xl njfonts text-pink text-stroke;
+  }
+
+
+  .marquee {
+    animation: marquee 15s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-120%);
+    }
+  }
+
+  /* Для екранів менше 640 пікселів */
+  @media (max-width: 479.98px) {
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-200%);
+      }
+    }
+  }
+
+  .rotate {
+    animation: spin 10s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    10% {
+      transform: rotate(360deg);
+    }
+
+    14% {
+      transform: rotate(720deg);
+    }
+
+    65% {
+      transform: rotate(720deg);
+    }
+
+    75% {
+      transform: rotate(360deg);
+    }
+
+    79% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .heart {
+    animation: scale 2s ease-in-out infinite;
+  }
+
+  @keyframes heart {
+    0% {
+      transform: scale(1);
+    }
+
+
+
+    50% {
+      transform: scale(1.5);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .scale {
+    animation: scale 10s ease-in-out infinite;
+  }
+
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+
+
+    13% {
+      transform: scale(1);
+    }
+
+    14% {
+      transform: scale(1.1);
+    }
+
+    18% {
+      transform: scale(1.1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    75% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .play-btn {
+    @apply box-border border-pink rounded-full absolute w-10 h-10 z-0 right-6 bottom-4;
+    animation: player 1s ease-in-out infinite;
+  }
+
+  .play-btn-play {
+    @apply box-border border-pink rounded-full absolute w-10 h-10 z-0 right-24 bottom-4;
+    animation: player 1s ease-in-out infinite;
+  }
+
+  @keyframes player {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+      border-width: 8px;
+    }
+
+    25% {
+      opacity: 0.5;
+    }
+
+    50% {
+      transform: scale(2);
+      opacity: 1;
+
+    }
+
+    75% {
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
 }
 
-@layer utilities {}
+@layer utilities {
+  .text-stroke {
+
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+  }
+}
