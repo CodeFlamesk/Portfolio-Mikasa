@@ -6,9 +6,13 @@ import AudioPlayer from '@components/Player/Player';
 const Home = () => {
     return (
         <div
-            className="w-full h-screen bg-cover bg-center bg-no-repeat inline-flex justify-center"
-            style={{ backgroundImage: `url(${mainBackground})` }}
+            className="w-full min-h-screen bg-cover bg-center bg-no-repeat inline-flex justify-center"
+            style={{
+                backgroundImage: `url(${mainBackground})`,
+                backgroundRepeat: 'repeat'
+            }}
         >
+
             <div className='flex flex-col items-center gap-6 pt-16 lg:pt-0'>
                 <div className=" btn flex items-end   lg:mt-16 ">
                     Mikasa
@@ -31,7 +35,7 @@ const Home = () => {
                 </div>
 
 
-                <div className="w-screen overflow-hidden  mt-6 md:mt-auto md:mb-28 lg:mb-6  ">
+                <div className="w-screen overflow-hidden  mt-6 md:mt-auto md:mb-28 lg:mb-10  ">
                     <div className='flex flex-row justify-center md:flex-col xl:flex-row gap-1 md:gap-3 items-center  bg-opacity-90 text-center rounded-3xl  marquee md:animate-none '>
                         <p className='main-text whitespace-nowrap'>Give your</p>
                         <div className='min-w-[80px] min-h-[60px] md:min-h-[80px] md:w-24 flex items-center justify-center'>
