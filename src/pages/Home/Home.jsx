@@ -34,7 +34,7 @@ const Home = () => {
                 <div className="w-screen overflow-hidden  mt-6 md:mt-auto md:mb-28 lg:mb-6  ">
                     <div className='flex flex-row justify-center md:flex-col xl:flex-row gap-1 md:gap-3 items-center  bg-opacity-90 text-center rounded-3xl  marquee md:animate-none '>
                         <p className='main-text whitespace-nowrap'>Give your</p>
-                        <div className='min-w-[80px] min-h-[60px] md:w-24 flex items-center justify-center'>
+                        <div className='min-w-[80px] min-h-[60px] md:min-h-[80px] md:w-24 flex items-center justify-center'>
                             <img src="/homeImg/heart.webp" alt="aboutLogo" className='heart min-w-[52px] h-[52px] xl:w-[72px] xl:h-[72px]' />
                         </div>
                         <p className='main-text whitespace-nowrap'>to a front-end developer</p>

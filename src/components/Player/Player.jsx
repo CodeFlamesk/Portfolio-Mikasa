@@ -25,7 +25,7 @@ const AudioPlayer = () => {
     return (
         <div>
             <audio ref={audioReff} loop>
-                <source src="/music/japan.mp3" type="audio/mpeg" />
+                <source src="./music/japan.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
             <div className="controls">
