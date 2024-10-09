@@ -53,7 +53,7 @@ const Home = () => {
 
 
                 <div className=' ml-auto mr-6 mt-auto mb-2'>
-                    < AudioPlayer audio={audioj} />
+                    < AudioPlayer audio={audioj} styleBgInput='bg-purple' styleInput="bg-purple accent-pink hover:bg-pink hover:shadow-[inset_0_1px_10px_#9b5de5]" />
                 </div>
 
 

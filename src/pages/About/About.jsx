@@ -30,7 +30,7 @@ const About = () => {
                 < AudioPlayer audio={audioat} borderColor="border-brown-dark" iconColor="#FEDA7A" styleInput="bg-brownl accent-brownl hover:bg-brownl  hover:shadow-[inset_0_1px_10px_#BE9965] " styleBgInput='bg-brown-dark' />
             </div>
             <div className='absolute bottom-0 right-0'>
-                <img src={aboutPerson} alt="person" className="w-auto  h-auto max-w-[436px] max-h-[286px]  lg:max-w-full lg:max-h-full" />
+                <img src={aboutPerson} alt="person" className="w-auto  h-auto max-w-[436px] max-h-[286px] lg:max-w-[536px] lg:max-h-[386px] xl:max-w-full xl:max-h-full" />
             </div>
 
 
