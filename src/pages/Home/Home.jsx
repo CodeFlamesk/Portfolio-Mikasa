@@ -6,7 +6,7 @@ import AudioPlayer from '@components/Player/Player';
 const Home = () => {
     return (
         <div
-            className="w-full h-screen  bg-cover bg-center bg-repeat inline-flex justify-center"
+            className="w-full min-h-screen  bg-cover bg-center bg-repeat inline-flex justify-center relative overflow-hidden"
             style={{
                 backgroundImage: `url(${mainBackground})`,
                 backgroundRepeat: 'repeat'
@@ -46,10 +46,13 @@ const Home = () => {
                 </div>
 
 
+                <div className=' ml-auto mr-6 mt-auto mb-2'>
+                    < AudioPlayer />
+                </div>
+
+
             </div>
-            <div className='absolute bottom-12 md:bottom-14 right-8'>
-                < AudioPlayer />
-            </div>
+
 
         </div>
     );

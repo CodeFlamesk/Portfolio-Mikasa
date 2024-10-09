@@ -23,20 +23,20 @@ const AudioPlayer = () => {
         setVolume(newVolume);
     };
     return (
-        <div>
+        <div className="flex gap-8 ">
             <audio ref={audioReff} loop>
                 <source src={japanAudio} type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
 
-            <button onClick={togglePlayPause} >
+            <button onClick={togglePlayPause} className="relative" >
 
-                <div className="z-10 absolute right-24  rounded-full  ">{isPlaying ? <PauseIcon /> : <PlayIcon />}</div>
+                <div className="z-10 mb-3   rounded-full  ">{isPlaying ? <PauseIcon /> : <PlayIcon />}</div>
                 {!showVolume && (<div className="play-btn-play"></div>)}
 
             </button>
-            <button onClick={() => setShowVolume(!showVolume)} >
-                <div className="z-10 absolute right-6  rounded-full">
+            <button onClick={() => setShowVolume(!showVolume)} className="relative" >
+                <div className="z-10 mb-3   rounded-full">
                     <VolumeSeting />
                 </div>
 
