@@ -31,12 +31,12 @@ const AudioPlayer = () => {
             <div className="controls">
                 <button onClick={togglePlayPause} >
 
-                    <div className="z-10 absolute right-24 bottom-4 rounded-full  ">{isPlaying ? <PauseIcon /> : <PlayIcon />}</div>
+                    <div className="z-10 absolute right-24 bottom-2 md:bottom-4 rounded-full  ">{isPlaying ? <PauseIcon /> : <PlayIcon />}</div>
                     {!showVolume && (<div className="play-btn-play"></div>)}
 
                 </button>
                 <button onClick={() => setShowVolume(!showVolume)} >
-                    <div className="z-10 absolute right-6 bottom-4 rounded-full">
+                    <div className="z-10 absolute right-6 bottom-2 md:bottom-4 rounded-full">
                         <VolumeSeting />
                     </div>
 
