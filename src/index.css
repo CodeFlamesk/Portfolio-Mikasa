@@ -10,11 +10,21 @@ body {
 @font-face {
   font-family: 'njfonts';
   src: url('/fonts/njnaruto.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'atfonts';
+  src: url('/fonts/ditty.ttf ') format('truetype');
 }
 
 @layer base {
   .njfonts {
     font-family: 'njfonts', sans-serif;
+  }
+
+  .atfonts {
+    font-family: 'atfonts', sans-serif;
   }
 
   body {

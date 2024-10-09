@@ -43,6 +43,10 @@ module.exports = {
       "white": "#FFFFFF",
       "black": "#000000",
       "pink": "#F98C96",
+      "brown-dark": "#BE9965",
+
+
+      "brownl": "#FEDA7A"
 
     },
 

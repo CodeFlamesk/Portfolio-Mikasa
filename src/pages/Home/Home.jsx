@@ -1,6 +1,12 @@
 import React from 'react';
 import mainBackground from '/homeImg/mainBackground.webp';
 import AudioPlayer from '@components/Player/Player';
+import { Link } from 'react-router-dom';
+
+
+import audioj from '@components/Player/music/japan.mp3';
+
+
 
 
 const Home = () => {
@@ -14,11 +20,11 @@ const Home = () => {
         >
 
             <div className='flex flex-col items-center gap-6 pt-16 lg:pt-0'>
-                <div className=" btn flex items-end   lg:mt-16 ">
+                <Link to="/aboutpage" className=" btn flex items-end   lg:mt-16 ">
                     Mikasa
                     <img src="/homeImg/aboutLogo.webp" alt="aboutLogo" className=" w-[35px] h-auto lg:w-full lg:h-full " />
 
-                </div>
+                </Link>
                 <div className="flex flex-col lg:flex-row items-center gap-y-6 gap-x-20  ">
                     <div className=" btn flex items-baseline  lg:lg:mt-16 ">
                         Skills
@@ -47,7 +53,7 @@ const Home = () => {
 
 
                 <div className=' ml-auto mr-6 mt-auto mb-2'>
-                    < AudioPlayer />
+                    < AudioPlayer audio={audioj} />
                 </div>
 
 
