@@ -28,15 +28,15 @@ const AudioPlayer = () => {
                 <source src={japanAudio} type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
-            <div className="controls">
+            <div className=" bg-purple">
                 <button onClick={togglePlayPause} >
 
-                    <div className="z-10 absolute right-24 bottom-[-40px] md:bottom-4 rounded-full  ">{isPlaying ? <PauseIcon /> : <PlayIcon />}</div>
+                    <div className="z-10 absolute right-24 top-0 md:bottom-4 rounded-full  ">{isPlaying ? <PauseIcon /> : <PlayIcon />}</div>
                     {!showVolume && (<div className="play-btn-play"></div>)}
 
                 </button>
                 <button onClick={() => setShowVolume(!showVolume)} >
-                    <div className="z-10 absolute right-6 bottom-[-40px] md:bottom-4 rounded-full">
+                    <div className="z-10 absolute right-6 top-0 md:bottom-4 rounded-full">
                         <VolumeSeting />
                     </div>
 
