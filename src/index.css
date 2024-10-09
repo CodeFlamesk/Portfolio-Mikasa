@@ -92,17 +92,7 @@ body {
   }
 
   /* Для екранів менше 640 пікселів */
-  @media (max-width: 479.98px) {
-    @keyframes marquee {
-      0% {
-        transform: translateX(100%);
-      }
 
-      100% {
-        transform: translateX(-200%);
-      }
-    }
-  }
 
   .rotate {
     animation: spin 10s linear infinite;
@@ -194,12 +184,12 @@ body {
   }
 
   .play-btn {
-    @apply box-border border-pink rounded-full absolute w-10 h-10 z-0 right-6 bottom-0 md:bottom-4;
+    @apply box-border border-pink rounded-full absolute w-10 h-10 z-0 right-6;
     animation: player 1s ease-in-out infinite;
   }
 
   .play-btn-play {
-    @apply box-border border-pink rounded-full absolute w-10 h-10 z-0 right-24 bottom-0 md:bottom-4;
+    @apply box-border border-pink rounded-full absolute w-10 h-10 z-0 right-24;
     animation: player 1s ease-in-out infinite;
   }
 
@@ -228,6 +218,49 @@ body {
       transform: scale(1);
       opacity: 0;
     }
+  }
+
+  @media (max-width: 768px) {
+    @keyframes player {
+      0% {
+        transform: scale(1);
+        opacity: 0;
+        border-width: 4px;
+      }
+
+      25% {
+        opacity: 0.5;
+      }
+
+      50% {
+        transform: scale(1.5);
+        opacity: 1;
+
+      }
+
+      75% {
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 0;
+      }
+    }
+  }
+
+  @media (max-width: 479.98px) {
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-200%);
+      }
+    }
+
+
   }
 }
 

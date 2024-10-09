@@ -47,7 +47,7 @@ const Home = () => {
 
 
             </div>
-            <div className='absolute bottom-9 md:bottom-12 right-8'>
+            <div className='absolute bottom-12 md:bottom-14 right-8'>
                 < AudioPlayer />
             </div>
 
