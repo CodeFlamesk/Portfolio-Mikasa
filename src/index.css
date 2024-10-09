@@ -194,12 +194,12 @@ body {
   }
 
   .play-btn {
-    @apply box-border border-pink rounded-full absolute w-10 h-10 z-0 right-6 top-0 md:bottom-4;
+    @apply box-border border-pink rounded-full absolute w-10 h-10 z-0 right-6 bottom-0 md:bottom-4;
     animation: player 1s ease-in-out infinite;
   }
 
   .play-btn-play {
-    @apply box-border border-pink rounded-full absolute w-10 h-10 z-0 right-24 top-0 md:bottom-4;
+    @apply box-border border-pink rounded-full absolute w-10 h-10 z-0 right-24 bottom-0 md:bottom-4;
     animation: player 1s ease-in-out infinite;
   }
 
