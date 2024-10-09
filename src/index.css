@@ -73,7 +73,7 @@ body {
   }
 
   .main-text {
-    @apply text-5xl md:text-4xl 2xl:text-5xl njfonts text-pink text-stroke;
+    @apply text-3xl md:text-4xl 2xl:text-5xl njfonts text-pink text-stroke;
   }
 
 
