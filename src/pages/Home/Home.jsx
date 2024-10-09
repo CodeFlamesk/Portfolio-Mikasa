@@ -6,7 +6,7 @@ import AudioPlayer from '@components/Player/Player';
 const Home = () => {
     return (
         <div
-            className="w-full min-h-screen max-h-screen bg-cover bg-center bg-no-repeat inline-flex justify-center"
+            className="w-full min-h-screen  bg-cover bg-center bg-repeat inline-flex justify-center"
             style={{
                 backgroundImage: `url(${mainBackground})`,
                 backgroundRepeat: 'repeat'
