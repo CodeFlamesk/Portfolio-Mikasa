@@ -32,7 +32,7 @@ const AudioPlayer = () => {
                 Your browser does not support the audio element.
             </audio>
 
-            <div
+            <label
                 className={`flex items-center justify-center bg-purple px-2 h-10 rounded-2xl transition-all duration-500 ease-in-out transform ${showVolume ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px] pointer-events-none'
                     }`}
             >
@@ -45,7 +45,7 @@ const AudioPlayer = () => {
                     onChange={changeVolume}
                     className="w-full h-2 bg-purple rounded-lg cursor-pointer accent-pink hover:bg-pink transition-all focus:outline-none hover:shadow-[inset_0_1px_10px_#9b5de5]"
                 />
-            </div>
+            </label>
 
             <button onClick={togglePlayPause} className="relative">
                 <div className="z-10 mb-3 rounded-full">
