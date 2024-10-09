@@ -17,7 +17,7 @@ const About = () => {
             }}
         >
             <div className='inline-flex flex-col gap-[58px] items-center md:items-start mx-4 md:mx-[86px] z-10'>
-                <div className='inline-flex text-4xl md:text-5xl lg:text-7xl gap-6 rounded-[17px] mt-[120px] atfonts text-white px-4 pt-6 pb-5 bg-opacity-80   bg-brown-dark'>
+                <div className='inline-flex text-4xl md:text-5xl lg:text-7xl gap-6 rounded-[17px] mt-16 lg:mt-[120px] atfonts text-white px-4 pt-6 pb-5 bg-opacity-80   bg-brown-dark'>
                     <img src="/homeImg/aboutLogo.webp" alt="aboutLogo" className=" w-[35px] h-auto lg:w-full lg:h-full" />
                     Mikasa
                     <img src="/homeImg/aboutLogo.webp" alt="aboutLogo" className=" w-[35px] h-auto lg:w-full lg:h-full" />
