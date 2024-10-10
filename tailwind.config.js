@@ -44,9 +44,12 @@ module.exports = {
       "black": "#000000",
       "pink": "#F98C96",
       "brown-dark": "#BE9965",
-
-
-      "brownl": "#FEDA7A"
+      "brownl": "#FEDA7A",
+      "blue-dark": '#0B4D72',
+      "blue-lighte": '#106696',
+      "blue-text": '#05C4F9',
+      "orange-border": '#FFA718',
+      "blue-input": '#0D87D0',
 
     },
 
