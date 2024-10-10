@@ -18,7 +18,7 @@ const About = () => {
         >
             <div className='  inline-flex flex-col gap-[58px] items-center md:items-start mx-4 md:mx-[86px]  '>
 
-                <div className='relative  mt-[140px]'>
+                <div className='relative  mt-24 lg:mt-[140px]'>
                     <img src="/aboutImg/sword-left.webp" alt="sword-left" className='absolute top-[-56px] md:top-[-70px] left-[-41px] z-0 swordl' />
                     <img src="/aboutImg/sword-right.webp" alt="sword-left" className='absolute top-[-56px] md:top-[-70px] right-[-41px] z-0 swordr' />
 

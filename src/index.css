@@ -230,6 +230,7 @@ body {
     }
   }
 
+
   @media (max-width: 768px) {
     @keyframes player {
       0% {
@@ -360,6 +361,87 @@ body {
 
 
   }
+}
+
+@media (max-width: 1024px) {
+  @keyframes swordl {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(45deg);
+    }
+
+    40% {
+      transform: rotate(45deg);
+    }
+
+    50% {
+      transform: rotate(0deg);
+    }
+
+    65% {
+      transform: rotate(0deg) translateY(0px) translateX(0px);
+    }
+
+    75% {
+      transform: rotate(0deg) translateY(-30px) translateX(-50px);
+    }
+
+    77% {
+      transform: rotate(0deg) translateY(0px) translateX(0px);
+    }
+
+    90% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+
+  @keyframes swordr {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(0deg) ;
+      transform: rotate(-45deg);
+    }
+
+    40% {
+      transform: rotate(-45deg);
+    }
+
+    50% {
+      transform: rotate(0deg);
+    }
+
+    65% {
+      transform: rotate(0deg) translateY(0px) translateX(0px);
+    }
+
+    75% {
+      transform: rotate(0deg) translateY(-30px) translateX(50px);
+    }
+
+    77% {
+      transform: rotate(0deg) translateY(0px) translateX(0px);
+    }
+
+    90% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
 }
 
 @layer utilities {
