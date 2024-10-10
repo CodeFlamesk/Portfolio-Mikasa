@@ -259,6 +259,94 @@ body {
     }
   }
 
+  .swordl {
+    animation: swordl 10s ease-in-out infinite;
+    animation-delay: 5s;
+  }
+
+  .swordr {
+    animation: swordr 10s ease-in-out infinite;
+    animation-delay: 5s;
+  }
+
+  @keyframes swordl {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(45deg);
+    }
+
+    40% {
+      transform: rotate(45deg);
+    }
+
+    50% {
+      transform: rotate(0deg);
+    }
+
+    65% {
+      transform: rotate(0deg) translateY(0px) translateX(0px);
+    }
+
+    75% {
+      transform: rotate(0deg) translateY(-60px) translateX(-50px);
+    }
+
+    77% {
+      transform: rotate(0deg) translateY(0px) translateX(0px);
+    }
+
+    90% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+
+  @keyframes swordr {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(-45deg);
+    }
+
+    40% {
+      transform: rotate(-45deg);
+    }
+
+    50% {
+      transform: rotate(0deg);
+    }
+
+    65% {
+      transform: rotate(0deg) translateY(0px) translateX(0px);
+    }
+
+    75% {
+      transform: rotate(0deg) translateY(-60px) translateX(50px);
+    }
+
+    77% {
+      transform: rotate(0deg) translateY(0px) translateX(0px);
+    }
+
+    90% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+
   @media (max-width: 479.98px) {
     @keyframes marquee {
       0% {
