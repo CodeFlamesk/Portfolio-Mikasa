@@ -55,6 +55,10 @@ body {
     transform-style: preserve-3d;
   }
 
+  .aboutskills {
+    @apply text-sm max-w-[180px] md:max-w-[250px] text-white pt-1 tracking-widest
+  }
+
   .btn::before {
     @apply content-[''] absolute border left-0 top-0 w-full h-full bg-[#754C62] border-black rounded-inherit transition-transform duration-150 ease-in-out;
     transform: translate3d(0, 0.3em, -0.6em);
@@ -450,6 +454,9 @@ body {
       transform: rotate(0deg);
     }
   }
+
+
+
 
 }
 

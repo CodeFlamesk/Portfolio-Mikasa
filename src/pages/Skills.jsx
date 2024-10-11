@@ -15,7 +15,9 @@ import audioone from '@components/Player/music/onepiece.mp3';
 
 const Skills = () => {
     const [cardList, setCardList] = useState([
-        { id: 1, order: 1, title: 'html', text: 'It is the standard language used to create and design web pages.', logo: htmlLogo },
+        {
+            id: 1, order: 1, title: 'html', text: 'It is the standard language used to create and design web pages.', logo: htmlLogo
+        },
         {
             id: 2, order: 2, title: 'css', text: 'It\'s a style sheet language used for describing the presentation of a document written in HTML or XML', logo: cssLogo,
         },
@@ -105,18 +107,22 @@ const Skills = () => {
     const sortDesigns = (a, b) => {
         return a.order - b.order;
     };
+
+
+
+
     return (
         <div
-            className="w-full min-h-screen bg-cover bg-center bg-repeat inline-flex relative overflow-hidden"
+            className="w-full min-h-screen bg-cover bg-center bg-repeat inline-flex relative "
             style={{
                 backgroundImage: `url(${skillsBackground})`,
                 backgroundRepeat: 'repeat',
             }}
         >
-            <div className='flex pt-[40px] mx-[86px] gap-[18px]'>
+            <div className='flex pt-[40px] mx-[86px] gap-[18px] overflow-auto flex-col lg:flex-row justify-center items-center '>
                 <div className='flex flex-col items-center bg-blue-dark opacity-80  max-h-max rounded-3xl px-6 pb-6 '>
                     <p className='piecefonts text-white text-[64px]'>Skills</p>
-                    <div className='flex flex-col gap-[10px] flex-wrap max-h-[790px] '>
+                    <div className='flex flex-col gap-[10px]  max-h-[750px] md:flex-wrap overflow-auto'>
                         {cardList.sort(sortCards).map(card => (
                             <div
                                 key={card.id}
@@ -132,14 +138,13 @@ const Skills = () => {
 
                                 <div className='flex flex-col njfonts max-w-[280px] '>
                                     <p className='text-2xl text-blue-text '> {card.title}</p>
-                                    <p className='text-sm max-w-[180px] text-white pt-1 tracking-widest'>{card.text}</p>
+                                    <p className='aboutskills text-white'>{card.text}</p>
                                 </div>
-
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className='flex flex-col bg-blue-dark  opacity-80 rounded-3xl px-6 pb-6  items-center max-h-max'>
+                <div className='flex flex-col bg-blue-dark  opacity-80 rounded-3xl px-6 pb-6  items-center max-h-max mb-3'>
                     <p className='piecefonts text-white text-[64px]'>DESIGNS</p>
                     <div className='flex flex-col gap-[10px] max-h-[790px]'>
                         {designList.sort(sortDesigns).map(design => (
@@ -157,7 +162,7 @@ const Skills = () => {
 
                                 <div className='flex flex-col njfonts max-w-[280px] '>
                                     <p className='text-2xl text-blue-text '> {design.title}</p>
-                                    <p className='text-sm max-w-[180px] text-white pt-1 tracking-widest'>{design.text}</p>
+                                    <p className='aboutskills text-white'>{design.text}</p>
                                 </div>
 
                             </div>
