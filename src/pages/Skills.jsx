@@ -113,20 +113,20 @@ const Skills = () => {
 
     return (
         <div
-            className="w-full min-h-screen bg-cover bg-center bg-repeat inline-flex relative "
+            className="w-full min-h-screen bg-cover bg-center bg-repeat  relative flex justify-center lg:justify-start  pb-10"
             style={{
                 backgroundImage: `url(${skillsBackground})`,
                 backgroundRepeat: 'repeat',
             }}
         >
-            <div className='flex pt-[40px] mx-[86px] gap-[18px] overflow-auto flex-col lg:flex-row justify-center items-center '>
-                <div className='flex flex-col items-center bg-blue-dark opacity-80  max-h-max rounded-3xl px-6 pb-6 '>
+            <div className='flex pt-[40px] mx-5 xl:mx-[86px] gap-[18px] overflow-auto flex-col lg:flex-row justify-center  '>
+                <div className='flex flex-col items-center bg-blue-dark opacity-80  max-h-max rounded-3xl  pb-6  '>
                     <p className='piecefonts text-white text-[64px]'>Skills</p>
-                    <div className='flex flex-col gap-[10px]  max-h-[750px] md:flex-wrap overflow-auto'>
+                    <div className='flex flex-col gap-[10px]  max-h-[750px] md:flex-wrap overflow-auto custom-scroll px-6'>
                         {cardList.sort(sortCards).map(card => (
                             <div
                                 key={card.id}
-                                className='bg-blue-lighte p-4 cursor-grab inline-flex flex-row rounded-3xl gap-[18px] border-box'
+                                className='bg-blue-lighte p-4  cursor-grab inline-flex flex-row rounded-3xl gap-[18px] border-box'
                                 draggable={true}
                                 onDragStart={(e) => dragStartHandler(e, card)}
                                 onDragLeave={(e) => dragEndHandler(e)}
@@ -144,7 +144,7 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div className='flex flex-col bg-blue-dark  opacity-80 rounded-3xl px-6 pb-6  items-center max-h-max mb-3'>
+                <div className='flex flex-col bg-blue-dark  opacity-80 rounded-3xl px-6 pb-6  items-center max-h-max '>
                     <p className='piecefonts text-white text-[64px]'>DESIGNS</p>
                     <div className='flex flex-col gap-[10px] max-h-[790px]'>
                         {designList.sort(sortDesigns).map(design => (
@@ -170,7 +170,7 @@ const Skills = () => {
                     </div>
                 </div>
             </div>
-            <div className=' absolute bottom-3 right-6 z-40'>
+            <div className=' bottom-3 right-6 z-40 fixed'>
                 < AudioPlayer audio={audioone} borderColor="border-blue-text " iconColor="#05C4F9" styleInput="bg-blue-text accent-blue-text hover:bg-blue-text  hover:shadow-[inset_0_1px_10px_#106696] " styleBgInput='bg-blue-input' />
             </div>
         </div>
