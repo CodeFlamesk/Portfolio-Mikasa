@@ -113,16 +113,16 @@ const Skills = () => {
 
     return (
         <div
-            className="w-full min-h-screen bg-cover bg-center bg-repeat  relative flex justify-center lg:justify-start  pb-10"
+            className="w-full min-h-screen bg-cover bg-center bg-repeat  relative flex justify-center lg:justify-start px-10 pb-10"
             style={{
                 backgroundImage: `url(${skillsBackground})`,
                 backgroundRepeat: 'repeat',
             }}
         >
-            <div className='flex pt-[40px] mx-5 xl:mx-[86px] gap-[18px] overflow-auto flex-col lg:flex-row justify-center  '>
+            <div className='flex pt-[40px]  xl:mx-[86px] gap-[18px] overflow-auto flex-col lg:flex-row justify-center  '>
                 <div className='flex flex-col items-center bg-blue-dark opacity-80  max-h-max rounded-3xl  pb-6  '>
                     <p className='piecefonts text-white text-[64px]'>Skills</p>
-                    <div className='flex flex-col gap-[10px]  max-h-[750px] md:flex-wrap overflow-auto custom-scroll px-6'>
+                    <div className='flex flex-col gap-[10px]  max-h-[750px] md:flex-wrap overflow-y-auto w-full custom-scroll px-3 md:px-6'>
                         {cardList.sort(sortCards).map(card => (
                             <div
                                 key={card.id}
@@ -134,7 +134,7 @@ const Skills = () => {
                                 onDragOver={(e) => dragOverHandler(e)}
                                 onDrop={(e) => dropHandler(e, card)}
                             >
-                                <div className='flex items-center justify-center'>   <img src={card.logo} alt="logo" /></div>
+                                <div className='flex items-center justify-center min-w-10'>   <img src={card.logo} alt="logo" /></div>
 
                                 <div className='flex flex-col njfonts max-w-[280px] '>
                                     <p className='text-2xl text-blue-text '> {card.title}</p>
@@ -144,13 +144,13 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div className='flex flex-col bg-blue-dark  opacity-80 rounded-3xl px-6 pb-6  items-center max-h-max '>
+                <div className='flex flex-col bg-blue-dark  opacity-80 rounded-3xl  px-3 md:px-6 pb-6  items-center max-h-max '>
                     <p className='piecefonts text-white text-[64px]'>DESIGNS</p>
-                    <div className='flex flex-col gap-[10px] max-h-[790px]'>
+                    <div className='flex flex-col gap-[10px] max-h-[790px] md:max-h-[490px] md:flex-wrap lg:max-h-[790px] lg:flex-nowrap'>
                         {designList.sort(sortDesigns).map(design => (
                             <div
                                 key={design.id}
-                                className='bg-blue-lighte p-4 cursor-grab inline-flex flex-row rounded-3xl gap-[18px] border-box'
+                                className='bg-blue-lighte p-4 cursor-grab inline-flex flex-row rounded-3xl gap-[18px] border-box '
                                 draggable={true}
                                 onDragStart={(e) => dragStartDesignHandler(e, design)}
                                 onDragLeave={(e) => dragEndDesignHandler(e)}
@@ -158,7 +158,7 @@ const Skills = () => {
                                 onDragOver={(e) => dragOverDesignHandler(e)}
                                 onDrop={(e) => dropDesignHandler(e, design)}
                             >
-                                <div className='flex items-center justify-center'>   <img src={design.logo} alt="logo" /></div>
+                                <div className='flex items-center justify-center min-w-10'>   <img src={design.logo} alt="logo" /></div>
 
                                 <div className='flex flex-col njfonts max-w-[280px] '>
                                     <p className='text-2xl text-blue-text '> {design.title}</p>
