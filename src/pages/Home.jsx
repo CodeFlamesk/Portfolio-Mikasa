@@ -2,12 +2,7 @@ import React from 'react';
 import mainBackground from '/homeImg/mainBackground.webp';
 import AudioPlayer from '@components/Player/Player';
 import { Link } from 'react-router-dom';
-
-
 import audioj from '@components/Player/music/japan.mp3';
-
-
-
 
 const Home = () => {
     return (
@@ -20,25 +15,25 @@ const Home = () => {
         >
 
             <div className='flex flex-col items-center gap-6 pt-16 lg:pt-0'>
-                <Link to="/about" className=" btn flex items-end   lg:mt-16 ">
+                <Link to="/home/about" className=" btn flex items-end   lg:mt-16 ">
                     Mikasa
                     <img src="/homeImg/aboutLogo.webp" alt="aboutLogo" className=" w-[35px] h-auto lg:w-full lg:h-full " />
 
                 </Link>
                 <div className="flex flex-col lg:flex-row items-center gap-y-6 gap-x-20  ">
-                    <Link to="/skills" className=" btn flex items-baseline  lg:lg:mt-16 ">
+                    <Link to="/home/skills" className=" btn flex items-baseline  lg:lg:mt-16 ">
                         Skills
                         <img src="/homeImg/skillsLogo.webp" alt="aboutLogo" className='rotate  w-[40px] h-auto lg:w-full lg:h-full' />
                     </Link>
-                    <div className=" btn flex items-baseline   lg:mt-16 ">
+                    <Link to="/home/contact" className=" btn flex items-baseline   lg:mt-16 ">
                         Contact
                         <img src="/homeImg/message.webp" alt="aboutLogo" className=" w-[40px] h-auto lg:w-[78px] lg:h-[63px] " />
-                    </div>
+                    </Link>
                 </div>
-                <div className=" btn flex items-baseline  lg:mt-16 ">
+                <Link to="/home/projects" className=" btn flex items-baseline  lg:mt-16 ">
                     Projects
                     <img src="/homeImg/projects.webp" alt="aboutLogo" className='scale  w-[45px] h-auto lg:w-[91px] lg:h-[59px] ' />
-                </div>
+                </Link>
 
 
                 <div className="w-screen overflow-hidden  mt-6 md:mt-auto md:mb-28 lg:mb-10  ">
