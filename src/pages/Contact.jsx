@@ -18,12 +18,12 @@ const Contact = () => {
                     <img src="/contactImg/treeBackground.webp" alt="tree" />
                 </div>
                 <div className='flex flex-col w-full items-center njfonts text-white relative '>
-                    <img src="/public/contactImg/mikasaAvatar.webp" alt="Mikasa" className='absolute top-[-82px]' />
-                    <img src="/public/contactImg/saskiSmall.webp" alt="Mikasa" className='absolute top-0 left-0' />
-                    <img src="/public/contactImg/cloud.webp" alt="cloud" className='absolute top-[152px] left-[113px]' />
-                    <img src="/public/contactImg/cloud.webp" alt="cloud" className='absolute top-[74px] right-[87px]' />
-                    <img src="/public/contactImg/cloud.webp" alt="cloud" className='absolute bottom-[38px] left-[175px] w-[52px] h-[36px]' />
-                    <img src="/public/contactImg/cloud.webp" alt="cloud" className='absolute bottom-[110px] right-[134px] w-[52px] h-[36px]  ' />
+                    <img src="/contactImg/mikasaAvatar.webp" alt="Mikasa" className='absolute top-[-82px]' />
+                    <img src="/contactImg/saskiSmall.webp" alt="Mikasa" className='absolute top-0 left-0' />
+                    <img src="/contactImg/cloud.webp" alt="cloud" className='absolute top-[152px] left-[113px]' />
+                    <img src="/contactImg/cloud.webp" alt="cloud" className='absolute top-[74px] right-[87px]' />
+                    <img src="/contactImg/cloud.webp" alt="cloud" className='absolute bottom-[38px] left-[175px] w-[52px] h-[36px]' />
+                    <img src="/contactImg/cloud.webp" alt="cloud" className='absolute bottom-[110px] right-[134px] w-[52px] h-[36px]  ' />
 
                     <p className='text-2xl pt-[111px]'>Volodymyr Kravets</p>
                     <p className='text-xl pt-[13px]'>Front-END</p>
