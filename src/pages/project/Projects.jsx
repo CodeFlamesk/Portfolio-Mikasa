@@ -20,15 +20,15 @@ const Projects = () => {
                 <p className="njfonts text-white text-[32px] md:text-[64px] pt-[40px] md:pt-[110px]">Front-end</p>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-[102px] pt-4'>
                     <Link to="/home/projectscard?category=landing" className='flex flex-col relative rounded-[20px] items-center'>
-                        <img src="/public/projectImg/naruto.webp" alt="naruto" draggable="false" />
+                        <img src="/projectImg/naruto.webp" alt="naruto" draggable="false" />
                         <p className='absolute text-white njfonts text-xl md:text-2xl lg:text-[32px] bottom-[20px]'>Landing Page</p>
                     </Link>
                     <Link to="/home/projectscard?category=multi" className='flex flex-col relative rounded-[20px] items-center'>
-                        <img src="/public/projectImg/saski.webp" alt="saski" draggable="false" />
+                        <img src="/projectImg/saski.webp" alt="saski" draggable="false" />
                         <p className='absolute text-white njfonts text-xl md:text-2xl lg:text-[32px] bottom-[20px]'>Multi-Page</p>
                     </Link>
                     <Link to="/home/projectscard?category=all" className='flex flex-col relative rounded-[20px] items-center'>
-                        <img src="/public/projectImg/all.webp" alt="all" draggable="false" />
+                        <img src="/projectImg/all.webp" alt="all" draggable="false" />
                         <p className='absolute text-white njfonts text-xl md:text-2xl lg:text-[32px] bottom-[20px]'>All</p>
                     </Link>
 
