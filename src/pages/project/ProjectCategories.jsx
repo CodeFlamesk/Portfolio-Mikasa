@@ -19,7 +19,7 @@ class ProjectCategories extends Component {
                     <div
                         key={category.key}
                         onClick={() => this.props.chooseCategory(category.key)}
-                        className={`cursor-pointer flex p-3 px-5 ${this.props.activeCategory === category.key ? 'bg-black text-white' : 'bg-white text-black'} bg-opacity-50 njfonts text-base md:text-xl rounded-[40px] gap-6 mb-6`}>
+                        className={`cursor-pointer flex p-3 px-5 ${this.props.activeCategory === category.key ? 'bg-black text-white' : 'bg-white text-black hover:bg-brownl  '} duration-300 transition-all ease-in-out bg-opacity-50 njfonts text-base md:text-xl rounded-[40px] gap-6 mb-6`}>
                         {category.name}
                     </div>
                 ))}

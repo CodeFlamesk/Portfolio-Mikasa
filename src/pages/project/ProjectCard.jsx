@@ -6,7 +6,8 @@ import proHouse from '/projectCardImg/proHouse.webp';
 import nftLogo from '/projectCardImg/nftLogo.webp';
 import wishbone from '/projectCardImg/wishbone.webp';
 import ProjectCategories from './ProjectCategories';
-
+import audiona from '@components/Player/music/naruto.mp3';
+import AudioPlayer from '@components/Player/Player';
 const ProjectCard = () => {
     const [currentItems, setCurrentItems] = useState([]);
     const [activeCategory, setActiveCategory] = useState('all');
@@ -14,10 +15,10 @@ const ProjectCard = () => {
     const navigate = useNavigate();
 
     const items = [
-        { id: 1, img: byWayLogo, category: 'multi', bgcolor: 'bg-blue-card' },
-        { id: 2, img: proHouse, category: 'multi', bgcolor: 'bg-purple-card' },
-        { id: 3, img: nftLogo, category: 'landing', bgcolor: 'bg-purple-blue-card' },
-        { id: 4, img: wishbone, category: 'landing', bgcolor: 'bg-grey-card' },
+        { id: 1, img: byWayLogo, category: 'multi', bgcolor: 'bg-blue-card', href: 'https://learning-management-system-steel.vercel.app/' },
+        { id: 2, img: proHouse, category: 'multi', bgcolor: 'bg-purple-card', href: 'https://codeflamesk.github.io/ProHouse/home.html' },
+        { id: 3, img: nftLogo, category: 'landing', bgcolor: 'bg-purple-blue-card', href: 'https://codeflamesk.github.io/NFT-Marketplace/home.html' },
+        { id: 4, img: wishbone, category: 'landing', bgcolor: 'bg-grey-card', href: 'https://codeflamesk.github.io/Wishbone__animation/home.html' },
     ];
 
     useEffect(() => {
@@ -48,13 +49,16 @@ const ProjectCard = () => {
                     chooseCategory={category => navigate(`?category=${category}`)}
                     activeCategory={activeCategory}
                 />
-                <div className="flex w-full flex-wrap justify-center gap-y-[20px]">
+                <div className="flex w-full flex-wrap justify-center gap-y-[20px] ">
                     {currentItems.map(item => (
-                        <div key={item.id} className={`${item.bgcolor} p-5 w-full md:w-[410px] mx-10 h-[240px] rounded-3xl flex items-center justify-center`}>
+                        <a href={item.href} target='_blank' key={item.id} className={`${item.bgcolor} hover:scale-90 duration-300 transition-all ease-in-out p-5 w-full md:w-[410px] mx-10 h-[240px] rounded-3xl flex items-center justify-center`}>
                             <img src={item.img} alt="Logo" />
-                        </div>
+                        </a>
                     ))}
                 </div>
+            </div>
+            <div className='fixed bottom-3 right-6 z-40'>
+                < AudioPlayer audio={audiona} borderColor="border-brown-dark" iconColor="#FEDA7A" styleInput="bg-brownl accent-brownl hover:bg-brownl  hover:shadow-[inset_0_1px_10px_#BE9965] " styleBgInput='bg-brown-dark' />
             </div>
         </div>
     );
