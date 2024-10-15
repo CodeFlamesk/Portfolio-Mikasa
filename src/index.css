@@ -47,8 +47,10 @@ body {
   }
 
   .menu-link {
-    @apply text-dark text-2xl njfonts px-4 py-2 rounded-3xl;
+    @apply text-dark text-2xl njfonts px-4 py-2 rounded-3xl box-border hover:border-dark duration-300 ease-in-out;
   }
+
+
 
   .menu {
     background-color: transparent;

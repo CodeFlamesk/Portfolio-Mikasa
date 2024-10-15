@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import narutoBackground from '/projectImg/narutoBackground.webp';
 import AudioPlayer from '@components/Player/Player';
 import audiona from '@components/Player/music/naruto.mp3';
+import Menu from '@components/Menu';
 const Projects = () => {
     return (
         <div className="w-full min-h-screen relative flex justify-center px-10 pb-10">
@@ -15,7 +16,9 @@ const Projects = () => {
             >
 
             </div>
-
+            <div className='fixed top-0 right-0 z-40'>
+                <Menu colorIcon="stroke-brownl" colorMenu="bg-brownl border-2 border-brownl" activeProject="border-none bg-opacity-30 bg-dark text-brownl cursor-default" />
+            </div>
             <div className="flex flex-col z-10 items-center select-none">
                 <p className="njfonts text-white text-[32px] md:text-[64px] pt-[40px] md:pt-[110px]">Front-end</p>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-[102px] pt-4'>

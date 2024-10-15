@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <div className=" w-full min-h-screen relative flex justify-center px-10 pb-10">
             <div className='fixed top-0 right-0 z-40'>
-                <Menu colorIcon="stroke-brownl" colorMenu="bg-brownl" />
+                <Menu colorIcon="stroke-brownl" colorMenu="bg-brownl border-2 border-brownl" activeContact="border-none bg-opacity-30 bg-dark text-brownl cursor-default" />
             </div>
             <div
                 className="absolute top-0 left-0 w-full h-full bg-cover bg-center"

@@ -6,6 +6,8 @@ import AudioPlayer from '@components/Player/Player';
 import audioat from '@components/Player/music/attackTitanWarUa.mp3';
 
 import aboutPerson from '/aboutImg/aboutPerson.webp';
+import Menu from '@components/Menu';
+
 const About = () => {
     return (
         <div
@@ -15,6 +17,9 @@ const About = () => {
                 backgroundRepeat: 'repeat'
             }}
         >
+            <div className='fixed top-0 right-0 z-40'>
+                <Menu colorIcon="stroke-brownl" colorMenu="bg-brownl border-2 border-brownl" activeAbout="border-none bg-opacity-30 bg-dark text-brownl cursor-default  " />
+            </div>
             <div className='  inline-flex flex-col gap-[58px] items-center md:items-start mx-4 md:mx-[86px]  '>
 
                 <div className='relative  mt-24 lg:mt-[140px]'>

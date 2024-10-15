@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Menu = ({ colorIcon = "black", colorMenu = "purple" }) => {
+const Menu = ({ colorIcon = "black", colorMenu = "purple", activeHome, activeAbout, activeSkills, activeProject, activeContact }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -34,22 +34,22 @@ const Menu = ({ colorIcon = "black", colorMenu = "purple" }) => {
             </button>
 
 
-            <div className={`duration-300 ease-in-out transform ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
+            <div className={`duration-300 ease-in-out transform ${isOpen ? 'translate-x-0 opacity-100 visible' : 'translate-x-full opacity-0 invisible'}`} style={{ position: 'absolute', top: 40, right: 0, zIndex: 10 }}>
                 <ul className="flex flex-col gap-4 items-center justify-center mr-2">
-                    <li className="pt-10 ">
-                        <Link to='/' className={`menu-link ${colorMenu}`}>Home</Link>
+                    <li className="pt-10">
+                        <Link to='/' className={`menu-link ${colorMenu} ${activeHome}`}>Home</Link>
                     </li>
                     <li className="py-2">
-                        <Link to='/home/about' className={`menu-link ${colorMenu}`}>About</Link>
+                        <Link to='/home/about' className={`menu-link ${colorMenu} ${activeAbout}`}>About</Link>
                     </li>
                     <li className="py-2">
-                        <Link to='/home/skills' className={`menu-link ${colorMenu}`}>Skills</Link>
+                        <Link to='/home/skills' className={`menu-link ${colorMenu} ${activeSkills}`}>Skills</Link>
                     </li>
                     <li className="py-2">
-                        <Link to='/home/projects' className={`menu-link ${colorMenu}`}>Project</Link>
+                        <Link to='/home/projects' className={`menu-link ${colorMenu} ${activeProject}`}>Project</Link>
                     </li>
                     <li className="py-2">
-                        <Link to='/home/contact' className={`menu-link ${colorMenu}`}>Contact</Link>
+                        <Link to='/home/contact' className={`menu-link ${colorMenu} ${activeContact}`}>Contact</Link>
                     </li>
                 </ul>
             </div>
