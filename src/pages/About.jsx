@@ -7,7 +7,6 @@ import audioat from '@components/Player/music/attackTitanWarUa.mp3';
 
 import aboutPerson from '/aboutImg/aboutPerson.webp';
 const About = () => {
-
     return (
         <div
             className="w-full min-h-screen  bg-cover bg-center inline-flex  relative overflow-hidden"

@@ -1,29 +1,22 @@
 import { createStore } from 'redux';
 
 const defaultState = {
-    isLoggedIn: false,
-    email: 'Please log in',
-    changeImg: null,
-    changeName: null,
+    currentTrack: null,
+    trackTimes: {},
 };
 
 const reducer = (state = defaultState, action) => {
     switch (action.type) {
-        case 'LOG_IN':
-            return { ...state, isLoggedIn: true };
-        case 'CHANGE_IMG':
-            return { ...state, changeImg: action.payload };
-        case 'CHANGE_NAME':
-            return { ...state, changeName: action.payload };
-        case 'LOG_OUT':
+        case 'SET_CURRENT_TRACK':
+            return { ...state, currentTrack: action.payload };
+        case 'SET_TRACK_TIME':
             return {
                 ...state,
-                isLoggedIn: false,
-                email: 'Please log in',
-                changeImg: null
+                trackTimes: {
+                    ...state.trackTimes,
+                    [action.payload.track]: action.payload.time,
+                },
             };
-        case 'SET_EMAIL':
-            return { ...state, email: action.payload };
         default:
             return state;
     }

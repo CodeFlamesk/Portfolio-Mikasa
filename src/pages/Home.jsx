@@ -2,7 +2,7 @@ import React from 'react';
 import mainBackground from '/homeImg/mainBackground.webp';
 import AudioPlayer from '@components/Player/Player';
 import { Link } from 'react-router-dom';
-import audioj from '@components/Player/music/japan.mp3';
+import audio from '@components/Player/music/japan.mp3';
 
 const Home = () => {
     return (
@@ -48,7 +48,7 @@ const Home = () => {
 
 
                 <div className=' ml-auto mr-6 mt-auto mb-2'>
-                    < AudioPlayer audio={audioj} styleBgInput='bg-purple' styleInput="bg-purple accent-pink hover:bg-pink hover:shadow-[inset_0_1px_10px_#9b5de5]" />
+                    < AudioPlayer audio={audio} styleBgInput='bg-purple' styleInput="bg-purple accent-pink hover:bg-pink hover:shadow-[inset_0_1px_10px_#9b5de5]" />
                 </div>
 
 

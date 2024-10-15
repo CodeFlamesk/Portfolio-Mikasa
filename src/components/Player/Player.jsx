@@ -3,8 +3,6 @@ import PauseIcon from "/public/img/pauseIcon";
 import PlayIcon from "/public/img/playIcon";
 import { useState, useRef } from "react";
 
-
-
 const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [volume, setVolume] = useState(0.5);
@@ -43,7 +41,7 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
                     step="0.1"
                     value={volume}
                     onChange={changeVolume}
-                    className={`w-full h-2  rounded-lg cursor-pointer   transition-all focus:outline-none  ${styleInput}`}
+                    className={`w-full h-2 rounded-lg cursor-pointer transition-all focus:outline-none ${styleInput}`}
                 />
             </label>
 
@@ -58,9 +56,9 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
                 <div className="z-10 mb-3 rounded-full">
                     <VolumeSeting iconColor={iconColor} />
                 </div>
-                {!showVolume && <div className={`play-btn  ${borderColor}`}></div>}
-            </button >
-        </div >
+                {!showVolume && <div className={`play-btn ${borderColor}`}></div>}
+            </button>
+        </div>
     );
 };
 

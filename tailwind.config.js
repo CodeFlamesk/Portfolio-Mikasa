@@ -10,6 +10,7 @@ module.exports = {
   theme: {
 
     extend: {
+
       lineHeight: {
 
       },
@@ -19,20 +20,7 @@ module.exports = {
       },
       borderColor: ['focus', 'valid', 'invalid'],
       outlineColor: ['focus', 'valid', 'invalid'],
-      screens: {
 
-
-      },
-      fontSize: {
-
-      },
-
-      spacing: {
-
-      },
-      borderRadius: {
-
-      },
 
     },
 
