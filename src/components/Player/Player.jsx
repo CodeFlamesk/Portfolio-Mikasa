@@ -18,7 +18,7 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
         if (!hasShownModal) {
             setShowModal(true);
         } else {
-            // Відновлення стану гучності з sessionStorage
+
             const savedVolume = sessionStorage.getItem("volume");
             if (savedVolume) {
                 const parsedVolume = parseFloat(savedVolume);
@@ -26,7 +26,7 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
                 audioReff.current.volume = parsedVolume;
             }
 
-            // Відновлення стану відтворення з sessionStorage
+
             const wasPlaying = sessionStorage.getItem("isPlaying") === 'true';
             setIsPlaying(wasPlaying);
             if (wasPlaying) {
@@ -60,21 +60,22 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
     };
 
     const handleModalNo = () => {
-        dispatch({ type: 'OPEN_MODAL' });
+        dispatch({ type: 'NO_MODAL' });
         sessionStorage.setItem("hasShownModal", "true");
         setShowModal(false);
-        togglePlayPause();
+        isPlaying(false);
     };
 
     return (
         <div className="flex gap-8">
             {showModal && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div className="bg-white p-4 rounded-lg shadow-lg text-center">
-                        <h2>Do you want jaga jaga?</h2>
-                        <div className="w-full flex justify-between">
-                            <button onClick={handleModalYes}>Yes</button>
-                            <button onClick={handleModalNo}>No</button>
+                <div className="fixed inset-0 bg-black  bg-opacity-80 flex justify-center items-center z-50">
+                    <div className="flex mx-10  flex-col max-w-[600px] playwrite font-bold items-start text-xl bg-white  rounded-lg shadow-lg p-4">
+                        < p className="text-3xl " >Notification</p>
+                        <h2 className="pt-4 ">Would you like to immerse yourself in the atmosphere of this site with the sounds of music?</h2>
+                        <div className="w-full flex justify-end gap-4 pt-4 ">
+                            <button onClick={handleModalYes} className="bg-blue-text h-10 w-20 rounded-lg text-center border-2 border-blue-text duration-300 hover:border-orange-border hover:bg-brownl transition-all ease-in-out ">Yes</button>
+                            <button onClick={handleModalNo} className="bg-blue-text h-10 w-20 rounded-lg text-center border-2 border-blue-text duration-300 hover:border-orange-border hover:bg-brownl transition-all ease-in-out">No</button>
                         </div>
                     </div>
                 </div>

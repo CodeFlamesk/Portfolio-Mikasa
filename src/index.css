@@ -19,6 +19,11 @@ body {
 }
 
 @font-face {
+  font-family: 'playwrite';
+  src: url('/fonts/playwrite.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'piecefonts';
   src: url('/fonts/onePiece.ttf ') format('truetype');
 }
@@ -26,6 +31,10 @@ body {
 @layer base {
   .njfonts {
     font-family: 'njfonts', sans-serif;
+  }
+
+  .playwrite {
+    font-family: 'playwrite', sans-serif;
   }
 
   .piecefonts {

@@ -9,6 +9,8 @@ const reducer = (state = defaultState, action) => {
     switch (action.type) {
         case 'OPEN_MODAL':
             return { ...state, showModal: true };
+        case 'NO_MODAL':
+            return { ...state, showModal: false };
         case 'PLAY_MUSIC':
             return { ...state, isPlaying: true };
         case 'PAUSE_MUSIC':
