@@ -23,6 +23,7 @@ const AppRouter = () => {
                 <Route path="/home/projects" element={<Projects />} />
                 <Route path="/home/projectscard" element={<ProjectCard />} />
                 <Route path="/home/contact" element={<Contact />} />
+
             </Route>
 
         </Routes>

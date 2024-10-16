@@ -6,7 +6,7 @@ import proHouse from '/projectCardImg/proHouse.webp';
 import nftLogo from '/projectCardImg/nftLogo.webp';
 import wishbone from '/projectCardImg/wishbone.webp';
 import ProjectCategories from './ProjectCategories';
-import audiona from '@components/Player/music/naruto.mp3';
+import audiona from '@components/Player/music/projectcard.mp3';
 import AudioPlayer from '@components/Player/Player';
 import Menu from '@components/Menu';
 const ProjectCard = () => {
@@ -47,7 +47,7 @@ const ProjectCard = () => {
             <div className='fixed top-0 right-0 z-40'>
                 <Menu colorIcon="stroke-brownl" colorMenu="bg-brownl border-2 border-brownl" activeProject="border-none bg-opacity-30 bg-dark text-brownl cursor-default" />
             </div>
-            <div className="flex flex-col z-10 items-center pt-[125px] select-none mb-10">
+            <div className="flex flex-col z-10 items-center pt-10 md:pt-[125px] select-none mb-10">
                 <ProjectCategories
                     chooseCategory={category => navigate(`?category=${category}`)}
                     activeCategory={activeCategory}

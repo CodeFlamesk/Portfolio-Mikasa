@@ -1,7 +1,7 @@
 
 import AudioPlayer from '@components/Player/Player';
 import contactBackground from '/contactImg/contactBackground.webp';
-import audiona from '@components/Player/music/naruto.mp3';
+import audiona from '@components/Player/music/contact.mp3';
 import Menu from '@components/Menu';
 const Contact = () => {
 
