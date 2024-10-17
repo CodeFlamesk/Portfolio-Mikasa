@@ -1,7 +1,5 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-
-import Layout from '../Layout/Layout';
 import Home from '@pages/Home';
 
 const Skills = lazy(() => import('@pages/Skills'));
@@ -14,14 +12,13 @@ const AppRouter = () => {
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="/home/about" element={<About />} />
-                    <Route path="/home/skills" element={<Skills />} />
-                    <Route path="/home/projects" element={<Projects />} />
-                    <Route path="/home/projectscard" element={<ProjectCard />} />
-                    <Route path="/home/contact" element={<Contact />} />
-                </Route>
+                {/* Ось маршрути без Layout */}
+                <Route path="/" element={<Home />} />
+                <Route path="/home/about" element={<About />} />
+                <Route path="/home/skills" element={<Skills />} />
+                <Route path="/home/projects" element={<Projects />} />
+                <Route path="/home/projectscard" element={<ProjectCard />} />
+                <Route path="/home/contact" element={<Contact />} />
             </Routes>
         </Suspense>
     );
