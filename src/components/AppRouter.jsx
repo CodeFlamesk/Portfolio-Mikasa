@@ -12,7 +12,6 @@ const AppRouter = () => {
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-                {/* Ось маршрути без Layout */}
                 <Route path="/" element={<Home />} />
                 <Route path="/home/about" element={<About />} />
                 <Route path="/home/skills" element={<Skills />} />
