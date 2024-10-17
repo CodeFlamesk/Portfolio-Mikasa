@@ -6,13 +6,8 @@ import audio from '@components/Player/music/japan.mp3';
 
 const Home = () => {
     return (
-        <div
-            className="w-full min-h-screen  bg-cover bg-center bg-repeat inline-flex justify-center relative overflow-hidden"
-            style={{
-                backgroundImage: `url(${mainBackground})`,
-                backgroundRepeat: 'repeat'
-            }}
-        >
+        <div className="w-full min-h-screen bg-cover bg-center bg-repeat inline-flex justify-center relative overflow-hidden home-bg">
+
 
             <div className='flex flex-col items-center gap-6 pt-16 lg:pt-0'>
                 <Link to="/home/about" className=" btn flex items-end   lg:mt-16 ">

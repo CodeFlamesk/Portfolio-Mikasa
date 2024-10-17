@@ -69,6 +69,11 @@ body {
     padding: 0;
   }
 
+  .home-bg {
+    background-image: url('/homeImg/mainBackground.webp');
+    background-repeat: repeat;
+  }
+
   .line {
     fill: none;
 
