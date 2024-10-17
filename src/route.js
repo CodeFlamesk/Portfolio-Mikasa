@@ -1,26 +1,22 @@
-
 import Home from "@/pages/Home/Home";
 import About from "@pages/About";
 import Contact from "@pages/Contact";
 
 
-
-
 export const publicRoutes = [
     {
-        path: HOME,
+        path: "/",
         Component: Home,
         name: "Home"
     },
     {
-        path: ABOUT,
+        path: "/home/about",
         Component: About,
-        name: "/home/about"
+        name: "About"
     },
     {
-        path: CONTACT,
+        path: "/home/contact",
         Component: Contact,
         name: "Contact"
     },
-
-]
+];
