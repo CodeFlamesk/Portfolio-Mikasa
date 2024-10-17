@@ -31,7 +31,7 @@ const Home = () => {
                 </Link>
 
 
-                <div className="w-screen   mt-10 mb-[80px] md:mt-auto md:mb-10    ">
+                <div className="w-screen   mt-10 mb-[80px] md:mt-auto md:mb-24 lg:mb-16    ">
                     <div className='flex flex-row justify-center md:flex-col xl:flex-row gap-1 md:gap-3 items-center  bg-opacity-90 text-center rounded-3xl  marquee md:animate-none '>
                         <p className='main-text whitespace-nowrap'>Give your</p>
                         <div className='min-w-[80px] min-h-[60px] md:min-h-[80px] md:w-24 flex items-center justify-center'>
