@@ -12,26 +12,26 @@ const Home = () => {
             <div className='flex flex-col items-center gap-6 pt-16 lg:pt-0'>
                 <Link to="/home/about" className=" btn flex items-end   lg:mt-16 ">
                     Mikasa
-                    <img src="/homeImg/aboutLogo.webp" alt="aboutLogo" className=" w-[35px] h-auto lg:w-full lg:h-full " />
+                    <img src="/homeImg/aboutLogo.webp" alt="aboutLogo" className=" w-[35px] h-[44px] lg:w-full lg:h-full " />
 
                 </Link>
                 <div className="flex flex-col lg:flex-row items-center gap-y-6 gap-x-20  ">
                     <Link to="/home/skills" className=" btn flex items-baseline  lg:lg:mt-16 ">
                         Skills
-                        <img src="/homeImg/skillsLogo.webp" alt="aboutLogo" className='rotate  w-[40px] h-auto lg:w-full lg:h-full' />
+                        <img src="/homeImg/skillsLogo.webp" alt="aboutLogo" className='rotate  w-[40px] h-[48px] lg:w-full lg:h-full' />
                     </Link>
                     <Link to="/home/contact" className=" btn flex items-baseline   lg:mt-16 ">
                         Contact
-                        <img src="/homeImg/message.webp" alt="aboutLogo" className=" w-[40px] h-auto lg:w-[78px] lg:h-[63px] " />
+                        <img src="/homeImg/message.webp" alt="aboutLogo" className=" w-[40px] h-[32px] lg:w-[78px] lg:h-[63px] " />
                     </Link>
                 </div>
                 <Link to="/home/projects" className=" btn flex items-baseline  lg:mt-16 ">
                     Projects
-                    <img src="/homeImg/projects.webp" alt="aboutLogo" className='scale  w-[45px] h-auto lg:w-[91px] lg:h-[59px] ' />
+                    <img src="/homeImg/projects.webp" alt="aboutLogo" className='scale  w-[45px] h-[29px] lg:w-[91px] lg:h-[59px] ' />
                 </Link>
 
 
-                <div className="w-screen overflow-hidden  mt-6 md:mt-auto md:mb-28 lg:mb-10  ">
+                <div className="w-screen overflow-hidden  mt-10 md:mt-auto md:mb-28 lg:mb-10  ">
                     <div className='flex flex-row justify-center md:flex-col xl:flex-row gap-1 md:gap-3 items-center  bg-opacity-90 text-center rounded-3xl  marquee md:animate-none '>
                         <p className='main-text whitespace-nowrap'>Give your</p>
                         <div className='min-w-[80px] min-h-[60px] md:min-h-[80px] md:w-24 flex items-center justify-center'>

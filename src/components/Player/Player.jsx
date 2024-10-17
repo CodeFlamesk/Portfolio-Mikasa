@@ -88,8 +88,10 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
 
             <label
                 className={`flex items-center justify-center px-2 h-10 rounded-2xl transition-all duration-500 ease-in-out transform ${styleBgInput} ${showVolume ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[20px] pointer-events-none'}`}
+                htmlFor="volume-control"
             >
                 <input
+                    id="volume-control"
                     type="range"
                     min="0"
                     max="1"
@@ -102,7 +104,7 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
 
             <button type="button" onClick={togglePlayPause} className="relative" aria-label="Play/Pause">
                 <div className="z-10 mb-3 rounded-full">
-                    {isPlaying ? <PauseIcon iconColor={iconColor} /> : <PlayIcon iconColor={iconColor} />}
+                    {isPlaying ? <PauseIcon alt='Pause' iconColor={iconColor} /> : <PlayIcon alt='Play' iconColor={iconColor} />}
                 </div>
                 {!showVolume && <div className={`play-btn-play ${borderColor}`}></div>}
             </button>
@@ -113,7 +115,7 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
                 </div>
                 {!showVolume && <div className={`play-btn ${borderColor}`}></div>}
             </button>
-        </div>
+        </div >
     );
 };
 
