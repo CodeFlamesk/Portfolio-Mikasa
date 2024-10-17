@@ -107,7 +107,7 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
                 {!showVolume && <div className={`play-btn-play ${borderColor}`}></div>}
             </button>
 
-            <button onClick={() => setShowVolume(!showVolume)} className="relative flex flex-col-reverse h-[52px]">
+            <button type="button" onClick={() => setShowVolume(!showVolume)} className="relative flex flex-col-reverse h-[52px]">
                 <div className="z-10 mb-3 rounded-full">
                     <VolumeSeting iconColor={iconColor} />
                 </div>
