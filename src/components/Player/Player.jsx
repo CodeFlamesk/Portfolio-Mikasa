@@ -74,8 +74,8 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
                         < p className="text-3xl " >Notification</p>
                         <h2 className="pt-4 ">Would you like to immerse yourself in the atmosphere of this site with the sounds of music?</h2>
                         <div className="w-full flex justify-end gap-4 pt-4 ">
-                            <button onClick={handleModalYes} className="bg-blue-text h-10 w-20 rounded-lg text-center border-2 border-blue-text duration-300 hover:border-orange-border hover:bg-brownl transition-all ease-in-out ">Yes</button>
-                            <button onClick={handleModalNo} className="bg-blue-text h-10 w-20 rounded-lg text-center border-2 border-blue-text duration-300 hover:border-orange-border hover:bg-brownl transition-all ease-in-out">No</button>
+                            <button type="button" onClick={handleModalYes} className="bg-blue-text h-10 w-20 rounded-lg text-center border-2 border-blue-text duration-300 hover:border-orange-border hover:bg-brownl transition-all ease-in-out ">Yes</button>
+                            <button type="button" onClick={handleModalNo} className="bg-blue-text h-10 w-20 rounded-lg text-center border-2 border-blue-text duration-300 hover:border-orange-border hover:bg-brownl transition-all ease-in-out">No</button>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
                 />
             </label>
 
-            <button onClick={togglePlayPause} className="relative">
+            <button type="button" onClick={togglePlayPause} className="relative">
                 <div className="z-10 mb-3 rounded-full">
                     {isPlaying ? <PauseIcon iconColor={iconColor} /> : <PlayIcon iconColor={iconColor} />}
                 </div>
