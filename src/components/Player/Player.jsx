@@ -100,14 +100,14 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
                 />
             </label>
 
-            <button type="button" onClick={togglePlayPause} className="relative">
+            <button type="button" onClick={togglePlayPause} className="relative" aria-label="Play/Pause">
                 <div className="z-10 mb-3 rounded-full">
                     {isPlaying ? <PauseIcon iconColor={iconColor} /> : <PlayIcon iconColor={iconColor} />}
                 </div>
                 {!showVolume && <div className={`play-btn-play ${borderColor}`}></div>}
             </button>
 
-            <button type="button" onClick={() => setShowVolume(!showVolume)} className="relative flex flex-col-reverse h-[52px]">
+            <button type="button" aria-label="Setting the volume" onClick={() => setShowVolume(!showVolume)} className="relative flex flex-col-reverse h-[52px]">
                 <div className="z-10 mb-3 rounded-full">
                     <VolumeSeting iconColor={iconColor} />
                 </div>
