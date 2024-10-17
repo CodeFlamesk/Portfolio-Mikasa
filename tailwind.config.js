@@ -10,7 +10,10 @@ module.exports = {
   theme: {
 
     extend: {
-
+      screens: {
+        'h-850': { 'raw': '(max-height: 850px)' },
+        'h-720': { 'raw': '(max-height: 719px)' },
+      },
       lineHeight: {
 
       },

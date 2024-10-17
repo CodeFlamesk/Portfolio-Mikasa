@@ -19,9 +19,9 @@ const Projects = () => {
             <div className='fixed top-0 right-0 z-40'>
                 <Menu colorIcon="stroke-brownl" colorMenu="bg-brownl border-2 border-brownl" activeProject="border-none bg-opacity-30 bg-dark text-brownl cursor-default" />
             </div>
-            <div className="flex flex-col z-10 items-center select-none">
-                <p className="njfonts text-white text-[32px] md:text-[64px] pt-[40px] md:pt-[110px]">Front-end</p>
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-[102px] pt-4'>
+            <div className="flex flex-col z-10 items-center select-none ">
+                <p className="njfonts text-white text-[32px] h-850:pt-[20px] md:text-[64px] pt-[40px] md:pt-[110px]">Front-end</p>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-[102px] h-850:pt-0 pt-4'>
                     <Link to="/home/projectscard?category=landing" className='flex flex-col relative rounded-[20px] items-center'>
                         <img src="/projectImg/naruto.webp" alt="naruto" draggable="false" />
                         <p className='absolute text-white njfonts text-xl md:text-2xl lg:text-[32px] bottom-[20px]'>Landing Page</p>

@@ -19,7 +19,7 @@ const Contact = () => {
                 }}
             >
             </div>
-            <div className='flex flex-col  rounded-t-[48px] rounded-b-[50px] mt-[9%] max-h-max bg-dark bg-opacity-85 max-w-[973px] z-10 mb-6'>
+            <div className='flex flex-col  rounded-t-[48px] rounded-b-[50px] mt-[9%] max-h-max bg-dark bg-opacity-85 max-w-[973px] z-10 mb-6 md:h-850:mb-0 md:h-720:mt-[4%] '>
                 <div className='w-full relative  rounded-t-[48px] hidden md:block '>
                     <img src="/contactImg/treeBackground.webp" alt="tree" className='w-full h-full object-cover' />
                 </div>
@@ -27,15 +27,15 @@ const Contact = () => {
                 <div className='flex flex-col w-full items-center njfonts text-white relative p-6'>
                     <img src="/contactImg/mikasaAvatar.webp" alt="Mikasa" className="md:absolute md:top-[-82px]  px-6  " />
                     <img src="/contactImg/saskiSmall.webp" alt="Mikasa" className='absolute top-0 left-0 hidden md:block' />
-                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden md:block absolute top-[152px] left-[113px]' />
+                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden  md:block absolute top-[152px] left-[113px]' />
                     <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden md:block absolute top-[74px] right-[87px]' />
-                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden md:block absolute bottom-[38px] left-[175px] w-[52px] h-[36px]' />
-                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden md:block absolute bottom-[110px] right-[134px] w-[52px] h-[36px]  ' />
+                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden h-720:hidden md:block absolute bottom-[38px] left-[175px] w-[52px] h-[36px]' />
+                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden  md:block absolute bottom-[110px] right-[134px] w-[52px] h-[36px]  ' />
 
                     <p className='text-2xl pt-6 md:pt-[111px] text-center  ' style={{ wordSpacing: '0.5em' }}>Volodymyr Kravets</p>
                     <p className='text-xl pt-[13px]'>Front-END</p>
 
-                    <div className='flex pt-6 md:pt-[75px] justify-center flex-wrap gap-8 md:gap-[70px]   md:mb-[90px] mx-3 '>
+                    <div className='flex pt-6 md:pt-[75px] justify-center flex-wrap gap-8 md:gap-[70px]   md:mb-[90px] h-720:mb-[24px] mx-3 '>
 
                         <a href="https://t.me/Na_blesse_M " target="_blank" rel="noopener noreferrer" className='flex items-center justify-center w-10 h-10 z-40 bg-telegram-bg rounded-full hover:bg-pink-lighte duration-300 transition-all ease-in-out '    > <img src="/contactImg/telegram.webp" alt="logo-contact" /></a>
 
