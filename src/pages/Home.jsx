@@ -25,7 +25,7 @@ const Home = () => {
                         <img src="/homeImg/message.webp" alt="aboutLogo" className=" w-[40px] h-[32px] lg:w-[78px] lg:h-[63px] " />
                     </Link>
                 </div>
-                <Link to="/home/projects" className=" btn flex items-baseline  lg:mt-16 ">
+                <Link to="/home/projects" className=" btn flex items-baseline md:mb-10 lg:mb-16 lg:mt-16 ">
                     Projects
                     <img src="/homeImg/projects.webp" alt="aboutLogo" className='scale  w-[45px] h-[29px] lg:w-[91px] lg:h-[59px] ' />
                 </Link>
