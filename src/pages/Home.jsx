@@ -31,7 +31,7 @@ const Home = () => {
                 </Link>
 
 
-                <div className="w-screen overflow-hidden  mt-10 md:mt-auto md:mb-28 lg:mb-10  ">
+                <div className="w-screen   mt-10 mb-[80px] md:mt-auto md:mb-10    ">
                     <div className='flex flex-row justify-center md:flex-col xl:flex-row gap-1 md:gap-3 items-center  bg-opacity-90 text-center rounded-3xl  marquee md:animate-none '>
                         <p className='main-text whitespace-nowrap'>Give your</p>
                         <div className='min-w-[80px] min-h-[60px] md:min-h-[80px] md:w-24 flex items-center justify-center'>
@@ -42,7 +42,7 @@ const Home = () => {
                 </div>
 
 
-                <div className=' ml-auto mr-6 mt-auto mb-2'>
+                <div className=' bottom-3 right-6 z-40 fixed'>
                     < AudioPlayer audio={audio} styleBgInput='bg-purple' styleInput="bg-purple accent-pink hover:bg-pink hover:shadow-[inset_0_1px_10px_#9b5de5]" />
                 </div>
 

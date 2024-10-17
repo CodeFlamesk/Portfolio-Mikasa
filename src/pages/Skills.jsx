@@ -168,11 +168,7 @@ const Skills = () => {
                 </div>
             </div>
             <div className=' bottom-3 right-6 z-40 fixed '>
-
                 <AudioPlayer audio={audioone} borderColor="border-blue-text  " iconColor="#05C4F9" styleInput="bg-blue-text accent-blue-text hover:bg-blue-text  hover:shadow-[inset_0_1px_10px_#106696] " styleBgInput='bg-blue-input' />
-
-
-
             </div>
         </div>
     );
