@@ -16,9 +16,9 @@ const Home = () => {
 
                 </Link>
                 <div className="flex flex-col lg:flex-row items-center gap-y-6 gap-x-20  ">
-                    <Link to="/home/skills" className=" btn flex items-baseline  lg:lg:mt-16 ">
+                    <Link to="/home/skills" className=" btn flex items-baseline  lg:mt-16 py-5 ">
                         Skills
-                        <img src="/homeImg/skillsLogo.webp" alt="aboutLogo" className='rotate  w-[40px] h-[48px] lg:w-full lg:h-full' />
+                        <img src="/homeImg/skillsLogo.webp" alt="aboutLogo" className='rotate   w-[40px] h-[40px] lg:w-full lg:h-full' />
                     </Link>
                     <Link to="/home/contact" className=" btn flex items-baseline   lg:mt-16 ">
                         Contact
