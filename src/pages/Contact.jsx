@@ -27,10 +27,10 @@ const Contact = () => {
                 <div className='flex flex-col w-full items-center njfonts text-white relative p-6'>
                     <img src="/contactImg/mikasaAvatar.webp" alt="Mikasa" className="md:absolute md:top-[-82px]  px-6  " />
                     <img src="/contactImg/saskiSmall.webp" alt="Mikasa" className='absolute top-0 left-0 hidden md:block' />
-                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden  md:block absolute top-[152px] left-[113px]' />
-                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden md:block absolute top-[74px] right-[87px]' />
-                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden h-720:hidden md:block absolute bottom-[38px] left-[175px] w-[52px] h-[36px]' />
-                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden  md:block absolute bottom-[110px] right-[134px] w-[52px] h-[36px]  ' />
+                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden scale md:block absolute top-[152px] left-[113px]' />
+                    <img src="/contactImg/cloud.webp" alt="cloud" className='  z-10 hidden md:block absolute top-[74px] right-[87px]' />
+                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10  hidden h-720:hidden md:block absolute bottom-[38px] left-[175px] w-[52px] h-[36px]' />
+                    <img src="/contactImg/cloud.webp" alt="cloud" className='z-10 hidden cloud md:block absolute bottom-[160px] lg:bottom-[110px] right-[134px] w-[52px] h-[36px]  ' />
 
                     <p className='text-2xl pt-6 md:pt-[111px] text-center  ' style={{ wordSpacing: '0.5em' }}>Volodymyr Kravets</p>
                     <p className='text-xl pt-[13px]'>Front-END</p>

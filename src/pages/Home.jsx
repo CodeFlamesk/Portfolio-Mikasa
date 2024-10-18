@@ -3,6 +3,7 @@ import mainBackground from '/homeImg/mainBackground.webp';
 import AudioPlayer from '@components/Player/Player';
 import { Link } from 'react-router-dom';
 import audio from '@components/Player/music/japan.mp3';
+import { gsap } from 'gsap';
 
 const Home = () => {
     return (
