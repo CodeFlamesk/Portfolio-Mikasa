@@ -30,7 +30,7 @@ const Projects = () => {
             <div className='fixed top-0 right-0 z-40 right-anim'>
                 <Menu colorIcon="stroke-brownl" colorMenu="bg-brownl border-2 border-brownl" activeProject="border-none bg-opacity-30 bg-dark text-brownl cursor-default" />
             </div>
-            <div className="flex flex-col z-10 items-center select-none ">
+            <div className="flex flex-col-reverse  z-10 items-center select-none ">
                 <p className="njfonts text-white text-[32px] h-850:pt-[20px] md:text-[64px] pt-[40px] md:pt-[110px] top-anim">Front-end</p>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-[102px] h-850:pt-0 pt-4'>
                     <div className='thirdleft-anim'>

@@ -123,7 +123,7 @@ const Skills = () => {
                 <Menu colorIcon="stroke-blue-text" colorMenu="bg-blue-text border-2 border-blue-text hover:border-brownl" activeSkills="bg-opacity-40 border-none bg-blue-lighte text-dark cursor-default" />
             </div>
             <div className='flex pt-[50px]  xl:mx-[86px] gap-[18px] overflow-auto flex-col lg:flex-row justify-center  '>
-                <div className='flex  flex-col-reverse items-center bg-blue-dark opacity-80  max-h-max rounded-3xl  pb-6 secondleft-anim '>
+                <div className='flex   items-center bg-blue-dark opacity-80  max-h-max rounded-3xl  pb-6 secondleft-anim '>
                     <p className='piecefonts text-white text-[64px]'>Skills</p>
                     <div className='flex flex-col gap-[10px]  max-h-[750px] md:flex-wrap overflow-y-auto w-full custom-scroll px-3 md:px-6'>
                         {cardList.sort(sortCards).map(card => (
