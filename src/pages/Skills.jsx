@@ -123,7 +123,7 @@ const Skills = () => {
                 <Menu colorIcon="stroke-blue-text" colorMenu="bg-blue-text border-2 border-blue-text hover:border-brownl" activeSkills="bg-opacity-40 border-none bg-blue-lighte text-dark cursor-default" />
             </div>
             <div className='flex pt-[50px]  xl:mx-[86px] gap-[18px] overflow-auto flex-col lg:flex-row justify-center  '>
-                <div className='flex   items-center bg-blue-dark opacity-80  max-h-max rounded-3xl  pb-6 secondleft-anim '>
+                <div className='flex flex-col  items-center bg-blue-dark opacity-80  max-h-max rounded-3xl  pb-6 secondleft-anim '>
                     <p className='piecefonts text-white text-[64px]'>Skills</p>
                     <div className='flex flex-col gap-[10px]  max-h-[750px] md:flex-wrap overflow-y-auto w-full custom-scroll px-3 md:px-6'>
                         {cardList.sort(sortCards).map(card => (
@@ -147,7 +147,7 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div className='flex left-anim flex-col bg-blue-dark  opacity-80 rounded-3xl  px-3 md:px-6 pb-6  items-center max-h-max '>
+                <div className='flex  left-anim flex-col bg-blue-dark  opacity-80 rounded-3xl  px-3 md:px-6 pb-6  items-center max-h-max '>
                     <p className='piecefonts text-white text-[64px]'>DESIGNS</p>
                     <div className='flex flex-col gap-[10px] max-h-[790px] md:max-h-[490px] md:flex-wrap lg:max-h-[790px] lg:flex-nowrap  rounded-3xl '>
                         {designList.sort(sortDesigns).map(design => (

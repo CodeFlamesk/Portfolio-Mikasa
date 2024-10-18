@@ -39,7 +39,7 @@ const Projects = () => {
                             <p className='absolute text-white njfonts text-xl md:text-2xl lg:text-[32px] bottom-[20px]'>Landing Page</p>
                         </Link>
                     </div>
-                    <div className='secondleft-anim'>
+                    <div className='secondleft-anim order-2'>
                         <Link to="/home/projectscard?category=multi" className='flex flex-col relative rounded-[20px] items-center'>
                             <img src="/projectImg/saski.webp" alt="saski" draggable="false" />
                             <p className='absolute text-white njfonts text-xl md:text-2xl lg:text-[32px] bottom-[20px]'>Multi-Page</p>
