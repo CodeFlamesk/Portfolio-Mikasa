@@ -18,7 +18,7 @@ const Home = () => {
         <div className="w-full min-h-screen bg-cover bg-center bg-repeat inline-flex justify-center relative overflow-hidden home-bg">
 
 
-            <div className='flex  flex-col flex-wrap items-center gap-6 h-720:gap-y-2 pt-16 lg:pt-0  '>
+            <div className='flex  flex-col flex-wrap items-center gap-6 h-720:gap-y-2 h-850:pt-5 pt-16 lg:pt-0  '>
 
                 <div className='top-anim'>
                     <Link to="/home/about" className=" btn flex items-end   lg:mt-16 h-850:mt-6 ">
@@ -49,7 +49,7 @@ const Home = () => {
 
 
 
-                <div className="w-screen   mt-10 mb-[80px] md:mt-auto md:mb-24 lg:mb-16  h-850:mb-1 text-anim ">
+                <div className="w-screen   mt-10 mb-[80px] h-720:mt-2 md:mt-auto md:mb-24 lg:mb-16 h-720: h-850:mb-[10px] md:h-850:mb-1 text-anim ">
                     <div className='flex flex-row justify-center md:flex-col xl:flex-row gap-1 md:gap-3 items-center  bg-opacity-90 text-center rounded-3xl  marquee md:animate-none '>
                         <p className='main-text whitespace-nowrap'>Give your</p>
                         <div className='min-w-[80px] min-h-[60px] md:min-h-[80px] md:w-24 flex items-center justify-center'>

@@ -27,7 +27,7 @@ const About = () => {
             <div className='fixed top-0 right-0 z-40 right-anim'>
                 <Menu colorIcon="stroke-brownl" colorMenu="bg-brownl border-2 border-brownl" activeAbout="border-none bg-opacity-30 bg-dark text-brownl cursor-default  " />
             </div>
-            <div className='left-anim  inline-flex flex-col gap-[58px] items-center md:items-start mx-4 md:mx-[86px]  '>
+            <div className='left-anim  inline-flex flex-col gap-[58px] items-center md:items-start mx-4 md:mx-[86px] z-10'>
 
                 <div className=' relative  mt-24 lg:mt-[140px]'>
                     <img src="/aboutImg/sword-left.webp" alt="sword-left" className='absolute top-[-56px] md:top-[-70px] left-[-41px] z-0 swordl' />
