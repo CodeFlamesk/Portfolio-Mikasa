@@ -33,7 +33,7 @@ const Projects = () => {
             <div className="flex flex-col z-10 items-center select-none ">
                 <p className="njfonts text-white text-[32px] h-850:pt-[20px] md:text-[64px] pt-[40px] md:pt-[110px] top-anim">Front-end</p>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-[102px] h-850:pt-0 pt-4'>
-                    <div className='left-anim sm:thirdleft-anim'>
+                    <div className='thirdleft-anim'>
                         <Link to="/home/projectscard?category=landing" className='flex flex-col relative rounded-[20px] items-center'>
                             <img src="/projectImg/naruto.webp" alt="naruto" draggable="false" />
                             <p className='absolute text-white njfonts text-xl md:text-2xl lg:text-[32px] bottom-[20px]'>Landing Page</p>
@@ -45,7 +45,7 @@ const Projects = () => {
                             <p className='absolute text-white njfonts text-xl md:text-2xl lg:text-[32px] bottom-[20px]'>Multi-Page</p>
                         </Link>
                     </div>
-                    <div className='thirdleft-anim sm:left-anim'>
+                    <div className='left-anim'>
                         <Link to="/home/projectscard?category=all" className='flex flex-col relative rounded-[20px] items-center'>
                             <img src="/projectImg/all.webp" alt="all" draggable="false" />
                             <p className='absolute text-white njfonts text-xl md:text-2xl lg:text-[32px] bottom-[20px]'>All</p>
