@@ -266,7 +266,7 @@ body {
 
 
   .heart {
-    animation: scale 5s ease-in-out infinite;
+    animation: heart 3s ease-in-out infinite;
   }
 
   @keyframes heart {
@@ -274,8 +274,12 @@ body {
       transform: scale(1);
     }
 
+    45% {
+      transform: scale(1);
+    }
+
     50% {
-      transform: scale(1.5);
+      transform: scale(1.1);
     }
 
     100% {
@@ -394,12 +398,12 @@ body {
 
   .swordl {
     animation: swordl 20s ease-in-out infinite;
-    animation-delay: 5s;
+    animation-delay: 1s;
   }
 
   .swordr {
     animation: swordr 20s ease-in-out infinite;
-    animation-delay: 5s;
+    animation-delay: 1s;
   }
 
   @keyframes swordl {
@@ -407,19 +411,18 @@ body {
       transform: rotate(0deg);
     }
 
+
+
+
     20% {
-      transform: rotate(0deg);
+      transform: rotate(45deg);
     }
 
     25% {
       transform: rotate(45deg);
     }
 
-    40% {
-      transform: rotate(45deg);
-    }
-
-    43% {
+    28% {
       transform: rotate(0deg);
     }
 
@@ -446,19 +449,17 @@ body {
       transform: rotate(0deg);
     }
 
+
+
     20% {
-      transform: rotate(0deg);
+      transform: rotate(-45deg);
     }
 
     25% {
       transform: rotate(-45deg);
     }
 
-    40% {
-      transform: rotate(-45deg);
-    }
-
-    43% {
+    28% {
       transform: rotate(0deg);
     }
 

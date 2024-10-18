@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import skillsBackground from '/skillsImg/skillsBackground.jpeg';
 import htmlLogo from '/public/skillsImg/html.jpeg';
 import cssLogo from '/public/skillsImg/css.jpeg';
@@ -13,8 +13,14 @@ import photoshopLogo from '/public/skillsImg/photoshop.jpeg';
 import AudioPlayer from '@components/Player/Player';
 import audioone from '@components/Player/music/onepiece.mp3';
 import Menu from '@components/Menu';
-
+import { gsap } from 'gsap';
 const Skills = () => {
+    useEffect(() => {
+        const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.inOut" } });
+        tl.from('.right-anim', { x: '150vh' }, 0)
+        tl.from('.left-anim', { x: '-150vh' }, 0)
+        tl.from('.secondleft-anim', { x: '-150vh', delay: 0.5 }, 0)
+    }, []);
     const [cardList, setCardList] = useState([
         {
             id: 1, order: 1, title: 'html', text: 'It is the standard language used to create and design web pages.', logo: htmlLogo
@@ -113,11 +119,11 @@ const Skills = () => {
                 backgroundRepeat: 'repeat',
             }}
         >
-            <div className='fixed top-0 right-0 z-40'>
+            <div className='fixed top-0 right-0 z-40 right-anim'>
                 <Menu colorIcon="stroke-blue-text" colorMenu="bg-blue-text border-2 border-blue-text hover:border-brownl" activeSkills="bg-opacity-40 border-none bg-blue-lighte text-dark cursor-default" />
             </div>
             <div className='flex pt-[50px]  xl:mx-[86px] gap-[18px] overflow-auto flex-col lg:flex-row justify-center  '>
-                <div className='flex flex-col items-center bg-blue-dark opacity-80  max-h-max rounded-3xl  pb-6  '>
+                <div className='flex flex-col items-center bg-blue-dark opacity-80  max-h-max rounded-3xl  pb-6 secondleft-anim '>
                     <p className='piecefonts text-white text-[64px]'>Skills</p>
                     <div className='flex flex-col gap-[10px]  max-h-[750px] md:flex-wrap overflow-y-auto w-full custom-scroll px-3 md:px-6'>
                         {cardList.sort(sortCards).map(card => (
@@ -141,7 +147,7 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div className='flex flex-col bg-blue-dark  opacity-80 rounded-3xl  px-3 md:px-6 pb-6  items-center max-h-max '>
+                <div className='flex left-anim flex-col bg-blue-dark  opacity-80 rounded-3xl  px-3 md:px-6 pb-6  items-center max-h-max '>
                     <p className='piecefonts text-white text-[64px]'>DESIGNS</p>
                     <div className='flex flex-col gap-[10px] max-h-[790px] md:max-h-[490px] md:flex-wrap lg:max-h-[790px] lg:flex-nowrap  rounded-3xl '>
                         {designList.sort(sortDesigns).map(design => (

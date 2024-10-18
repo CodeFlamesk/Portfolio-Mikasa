@@ -1,14 +1,21 @@
 
 import aboutBackground from '/aboutImg/aboutBackground.webp';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import AudioPlayer from '@components/Player/Player';
 import audioat from '@components/Player/music/attackTitanWarUa.mp3';
 
 import aboutPerson from '/aboutImg/aboutPerson.webp';
 import Menu from '@components/Menu';
-
+import { gsap } from 'gsap';
 const About = () => {
+    useEffect(() => {
+        const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.inOut" } });
+        tl.from('.right-anim', { x: '150vh' }, 0)
+        tl.from('.left-anim', { x: '-150vh' }, 0)
+
+    }, []);
+
     return (
         <div
             className="w-full min-h-screen  bg-cover bg-center inline-flex  relative overflow-hidden"
@@ -17,12 +24,12 @@ const About = () => {
                 backgroundRepeat: 'repeat'
             }}
         >
-            <div className='fixed top-0 right-0 z-40'>
+            <div className='fixed top-0 right-0 z-40 right-anim'>
                 <Menu colorIcon="stroke-brownl" colorMenu="bg-brownl border-2 border-brownl" activeAbout="border-none bg-opacity-30 bg-dark text-brownl cursor-default  " />
             </div>
-            <div className='  inline-flex flex-col gap-[58px] items-center md:items-start mx-4 md:mx-[86px]  '>
+            <div className='left-anim  inline-flex flex-col gap-[58px] items-center md:items-start mx-4 md:mx-[86px]  '>
 
-                <div className='relative  mt-24 lg:mt-[140px]'>
+                <div className=' relative  mt-24 lg:mt-[140px]'>
                     <img src="/aboutImg/sword-left.webp" alt="sword-left" className='absolute top-[-56px] md:top-[-70px] left-[-41px] z-0 swordl' />
                     <img src="/aboutImg/sword-right.webp" alt="sword-left" className='absolute top-[-56px] md:top-[-70px] right-[-41px] z-0 swordr' />
 
@@ -41,7 +48,7 @@ const About = () => {
             <div className=' absolute bottom-3 right-6 z-40'>
                 < AudioPlayer audio={audioat} borderColor="border-brown-dark" iconColor="#FEDA7A" styleInput="bg-brownl accent-brownl hover:bg-brownl  hover:shadow-[inset_0_1px_10px_#BE9965] " styleBgInput='bg-brown-dark' />
             </div>
-            <div className='absolute bottom-0 right-0'>
+            <div className='absolute bottom-0 right-0 right-anim'>
                 <img src={aboutPerson} alt="person" className="w-auto  h-auto max-w-[436px] max-h-[286px] lg:max-w-[536px] lg:max-h-[386px] xl:max-w-full xl:max-h-full z-0" />
             </div>
 
