@@ -10,22 +10,25 @@ body {
 @font-face {
   font-family: 'njfonts';
   src: url('/fonts/njnaruto.ttf') format('truetype');
-
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'atfonts';
-  src: url('/fonts/ditty.ttf ') format('truetype');
+  src: url('/fonts/ditty.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'playwrite';
   src: url('/fonts/playwrite.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'piecefonts';
-  src: url('/fonts/onePiece.ttf ') format('truetype');
+  src: url('/fonts/onePiece.ttf') format('truetype');
+  font-display: swap;
 }
 
 @layer base {
