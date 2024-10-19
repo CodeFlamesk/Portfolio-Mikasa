@@ -13,12 +13,12 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        const hasShownModal = sessionStorage.getItem("hasShownModal");
+        const hasShownModal = localStorage.getItem("hasShownModal");
 
         if (!hasShownModal) {
-            setShowModal(true); // Показати модальне вікно, якщо користувач заходить вперше
+            setShowModal(true);
         } else {
-            const savedVolume = sessionStorage.getItem("volume");
+            const savedVolume = localStorage.getItem("volume");
             if (savedVolume) {
                 const parsedVolume = parseFloat(savedVolume);
                 setVolume(parsedVolume);
@@ -27,7 +27,7 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
                 }
             }
 
-            const wasPlaying = sessionStorage.getItem("isPlaying") === 'true';
+            const wasPlaying = localStorage.getItem("isPlaying") === 'true';
             setIsPlaying(wasPlaying);
             if (wasPlaying && audioRef.current) {
                 audioRef.current.play();
@@ -42,7 +42,7 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
             audioRef.current.play();
         }
         setIsPlaying(!isPlaying);
-        sessionStorage.setItem("isPlaying", !isPlaying);
+        localStorage.setItem("isPlaying", !isPlaying);
     };
 
     const changeVolume = (e) => {
@@ -51,21 +51,21 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
             audioRef.current.volume = newVolume;
         }
         setVolume(newVolume);
-        sessionStorage.setItem("volume", newVolume);
+        localStorage.setItem("volume", newVolume);
     };
 
     const handleModalYes = () => {
         dispatch({ type: 'OPEN_MODAL' });
-        sessionStorage.setItem("hasShownModal", "true"); // Встановити прапорець, щоб більше не показувати модальне вікно
+        localStorage.setItem("hasShownModal", "true");
         setShowModal(false);
-        togglePlayPause(); // Запускаємо музику при натисканні "Yes"
+        togglePlayPause();
     };
 
     const handleModalNo = () => {
         dispatch({ type: 'NO_MODAL' });
-        sessionStorage.setItem("hasShownModal", "true"); // Встановити прапорець, щоб більше не показувати модальне вікно
+        localStorage.setItem("hasShownModal", "true");
         setShowModal(false);
-        setIsPlaying(false); // Виправлення: зупиняємо музику при натисканні "No"
+        setIsPlaying(false);
     };
 
     return (
