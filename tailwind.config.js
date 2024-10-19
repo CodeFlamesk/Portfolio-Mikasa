@@ -52,6 +52,8 @@ module.exports = {
       "pink-lighte": '#E3878B',
 
 
+
+
     },
 
   },

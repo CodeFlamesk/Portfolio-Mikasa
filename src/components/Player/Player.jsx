@@ -7,7 +7,7 @@ import PlayIcon from "/public/img/playIcon";
 const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [volume, setVolume] = useState(0.5);
-    const audioReff = useRef(null);
+    const audioRef = useRef(null);
     const [showVolume, setShowVolume] = useState(false);
     const dispatch = useDispatch();
     const [showModal, setShowModal] = useState(false);
@@ -16,72 +16,74 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
         const hasShownModal = sessionStorage.getItem("hasShownModal");
 
         if (!hasShownModal) {
-            setShowModal(true);
+            setShowModal(true); // Показати модальне вікно, якщо користувач заходить вперше
         } else {
-
             const savedVolume = sessionStorage.getItem("volume");
             if (savedVolume) {
                 const parsedVolume = parseFloat(savedVolume);
                 setVolume(parsedVolume);
-                audioReff.current.volume = parsedVolume;
+                if (audioRef.current) {
+                    audioRef.current.volume = parsedVolume;
+                }
             }
-
 
             const wasPlaying = sessionStorage.getItem("isPlaying") === 'true';
             setIsPlaying(wasPlaying);
-            if (wasPlaying) {
-                audioReff.current.play();
+            if (wasPlaying && audioRef.current) {
+                audioRef.current.play();
             }
         }
     }, []);
 
     const togglePlayPause = () => {
         if (isPlaying) {
-            audioReff.current.pause();
+            audioRef.current.pause();
         } else {
-            audioReff.current.play();
+            audioRef.current.play();
         }
         setIsPlaying(!isPlaying);
-        sessionStorage.setItem("isPlaying", !isPlaying); // Зберігаємо стан відтворення
+        sessionStorage.setItem("isPlaying", !isPlaying);
     };
 
     const changeVolume = (e) => {
         const newVolume = e.target.value;
-        audioReff.current.volume = newVolume;
+        if (audioRef.current) {
+            audioRef.current.volume = newVolume;
+        }
         setVolume(newVolume);
-        sessionStorage.setItem("volume", newVolume); // Зберігаємо гучність в sessionStorage
+        sessionStorage.setItem("volume", newVolume);
     };
 
     const handleModalYes = () => {
         dispatch({ type: 'OPEN_MODAL' });
-        sessionStorage.setItem("hasShownModal", "true");
+        sessionStorage.setItem("hasShownModal", "true"); // Встановити прапорець, щоб більше не показувати модальне вікно
         setShowModal(false);
-        togglePlayPause();
+        togglePlayPause(); // Запускаємо музику при натисканні "Yes"
     };
 
     const handleModalNo = () => {
         dispatch({ type: 'NO_MODAL' });
-        sessionStorage.setItem("hasShownModal", "true");
+        sessionStorage.setItem("hasShownModal", "true"); // Встановити прапорець, щоб більше не показувати модальне вікно
         setShowModal(false);
-        isPlaying(false);
+        setIsPlaying(false); // Виправлення: зупиняємо музику при натисканні "No"
     };
 
     return (
         <div className="flex gap-8">
             {showModal && (
-                <div className="fixed inset-0 bg-black  bg-opacity-80 flex justify-center items-center z-50">
-                    <div className="flex mx-10  flex-col max-w-[600px] playwrite font-bold items-start text-xl bg-white  rounded-lg shadow-lg p-4">
-                        < p className="text-3xl " >Notification</p>
-                        <h2 className="pt-4 ">Would you like to immerse yourself in the atmosphere of this site with the sounds of music?</h2>
-                        <div className="w-full flex justify-end gap-4 pt-4 ">
-                            <button type="button" onClick={handleModalYes} className="bg-blue-text h-10 w-20 rounded-lg text-center border-2 border-blue-text duration-300 hover:border-orange-border hover:bg-brownl transition-all ease-in-out ">Yes</button>
-                            <button type="button" onClick={handleModalNo} className="bg-blue-text h-10 w-20 rounded-lg text-center border-2 border-blue-text duration-300 hover:border-orange-border hover:bg-brownl transition-all ease-in-out">No</button>
+                <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
+                    <div className="flex mx-10 flex-col max-w-[600px] font-bold text-xl bg-pink text-viber-bg rounded-lg shadow-lg p-4">
+                        <p className="text-3xl">Notification</p>
+                        <h2 className="pt-4">Would you like to immerse yourself in the atmosphere of this site with the sounds of music?</h2>
+                        <div className="w-full flex justify-end gap-4 pt-4">
+                            <button type="button" onClick={handleModalYes} className="bg-viber-bg text-white h-10 w-20 rounded-lg border-2 border-viber-bg hover:border-purple hover:text-viber-bg hover:bg-opacity-10 transition-all">Yes</button>
+                            <button type="button" onClick={handleModalNo} className="bg-viber-bg text-white h-10 w-20 rounded-lg border-2 border-viber-bg hover:border-purple hover:text-viber-bg hover:bg-opacity-10 transition-all">No</button>
                         </div>
                     </div>
                 </div>
             )}
 
-            <audio ref={audioReff} loop>
+            <audio ref={audioRef} loop>
                 <source src={audio} type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
@@ -115,7 +117,7 @@ const AudioPlayer = ({ audio, borderColor, iconColor, styleInput, styleBgInput }
                 </div>
                 {!showVolume && <div className={`play-btn ${borderColor}`}></div>}
             </button>
-        </div >
+        </div>
     );
 };
 
