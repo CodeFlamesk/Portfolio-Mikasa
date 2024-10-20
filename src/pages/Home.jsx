@@ -27,7 +27,7 @@ const Home = () => {
                             height="44" />
                     </Link>
                 </div>
-                <div className="flex flex-col left-anim lg:flex-row items-center gap-y-6  gap-x-20  lg:mt-16 h-850:mt-6 ">
+                <div className="flex flex-col left-anim lg:flex-row items-center gap-y-6 h-720:mt-6  gap-x-20  lg:mt-16  ">
                     <Link to="/home/skills" className=" btn flex items-baseline  py-5 ">
                         Skills
                         <img src="/homeImg/skillsLogo.webp" alt="aboutLogo" className='rotate   w-[40px] h-[40px] lg:w-full lg:h-full' width="40"
@@ -40,7 +40,7 @@ const Home = () => {
                     </Link>
                 </div>
                 <div className='bottom-anim'>
-                    <Link to="/home/projects" className=" btn flex items-baseline md:mb-10 lg:mb-16 lg:mt-16 h-850:mt-6 h-850:mb-6">
+                    <Link to="/home/projects" className=" btn flex items-baseline md:mb-10 lg:mb-16 lg:mt-16 h-720:mt-6 h-850:mb-6">
                         Projects
                         <img src="/homeImg/projects.webp" alt="aboutLogo" className='scale  w-[45px] h-[29px] lg:w-[91px] lg:h-[59px] ' width="45"
                             height="29" />
@@ -49,7 +49,7 @@ const Home = () => {
 
 
 
-                <div className="w-screen   mt-10 mb-[80px] h-720:mt-2 md:mt-auto md:mb-24 lg:mb-16 h-720: h-850:mb-[10px] md:h-850:mb-1 text-anim ">
+                <div className="w-screen   mt-10 mb-[80px] h-720:mt-2 md:mt-auto md:mb-24 lg:mb-16  h-850:mb-[10px] md:h-850:mb-1 text-anim ">
                     <div className='flex flex-row justify-center md:flex-col xl:flex-row gap-1 md:gap-3 items-center  bg-opacity-90 text-center rounded-3xl  marquee md:animate-none '>
                         <p className='main-text whitespace-nowrap'>Give your</p>
                         <div className='min-w-[80px] min-h-[60px] md:min-h-[80px] md:w-24 flex items-center justify-center'>
