@@ -206,7 +206,7 @@ body {
     }
   }
 
-  /* Для екранів менше 640 пікселів */
+
 
 
   .rotate {
@@ -333,6 +333,41 @@ body {
     @apply box-border border-pink rounded-full absolute bottom-3 w-10 h-10 z-0;
     animation: player 1s ease-in-out infinite;
   }
+
+  .rotate {
+    animation: rotate 4s ease-in-out infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+
+    20% {
+      transform: rotate(2deg);
+    }
+
+    40% {
+      transform: rotate(-2deg);
+    }
+
+    60% {
+      transform: rotate(2deg);
+    }
+
+    80% {
+      transform: rotate(-2deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+
+
+
 
   .play-btn-play {
     @apply box-border border-pink rounded-full absolute bottom-3 w-10 h-10 z-0;

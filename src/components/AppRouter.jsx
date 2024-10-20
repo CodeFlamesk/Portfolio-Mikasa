@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from '@pages/Home';
-
+import LoadingGif from '../../public/img/loading.gif'
 const Skills = lazy(() => import('@pages/Skills'));
 const About = lazy(() => import('@pages/About'));
 const Projects = lazy(() => import('@pages/project/Projects'));
@@ -10,7 +10,7 @@ const Contact = lazy(() => import('@pages/Contact'));
 
 const AppRouter = () => {
     return (
-        <Suspense fallback={<div className='flex justify-center items-center'>Loading...</div>}>
+        <Suspense fallback={<div className='flex justify-center items-center pt-[47%]'><img src={LoadingGif} alt="Loading..." />.</div>}>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home/about" element={<About />} />
@@ -22,5 +22,4 @@ const AppRouter = () => {
         </Suspense>
     );
 };
-
 export default AppRouter;
