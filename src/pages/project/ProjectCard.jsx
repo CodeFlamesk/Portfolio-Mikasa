@@ -26,7 +26,7 @@ const ProjectCard = () => {
         { id: 1, img: byWayLogo, category: 'multi', bgcolor: 'bg-blue-card', href: 'https://learning-management-system-steel.vercel.app/' },
         { id: 3, img: nftLogo, category: 'multi', bgcolor: 'bg-purple-blue-card', href: 'https://codeflamesk.github.io/NFT-Marketplace/home.html' },
         { id: 2, img: proHouse, category: 'landing', bgcolor: 'bg-purple-card', href: 'https://codeflamesk.github.io/ProHouse/home.html' },
-        { id: 4, img: wishbone, category: 'landing', bgcolor: 'bg-grey-card', href: 'https://codeflamesk.github.io/Wishbone__animation/home.html' },
+        { id: 4, img: wishbone, category: 'landing', bgcolor: 'bg-grey-card', href: 'https://codeflamesk.github.io/Wishbone__project/home.html' },
     ];
 
     useEffect(() => {
