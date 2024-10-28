@@ -5,6 +5,7 @@ import byWayLogo from '/projectCardImg/byWayLogo.webp';
 import proHouse from '/projectCardImg/proHouse.webp';
 import nftLogo from '/projectCardImg/nftLogo.webp';
 import wishbone from '/projectCardImg/wishbone.webp';
+import beanScene from '/projectCardImg/beanScene.webp';
 import ProjectCategories from './ProjectCategories';
 import audiona from '@components/Player/music/projectcard.mp3';
 import AudioPlayer from '@components/Player/Player';
@@ -27,6 +28,7 @@ const ProjectCard = () => {
         { id: 3, img: nftLogo, category: 'multi', bgcolor: 'bg-purple-blue-card', href: 'https://codeflamesk.github.io/NFT-Marketplace/home.html' },
         { id: 2, img: proHouse, category: 'landing', bgcolor: 'bg-purple-card', href: 'https://codeflamesk.github.io/ProHouse/home.html' },
         { id: 4, img: wishbone, category: 'landing', bgcolor: 'bg-grey-card', href: 'https://codeflamesk.github.io/Wishbone__project/home.html' },
+        { id: 5, img: beanScene, category: 'landing', bgcolor: 'bg-bean-scene', href: 'https://bean-scene-ebon.vercel.app/' },
     ];
 
     useEffect(() => {
