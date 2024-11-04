@@ -50,7 +50,7 @@ module.exports = {
       "viber-bg": '#7B519D',
       "telegram-bg": '#2EA6D9',
       "pink-lighte": '#E3878B',
-
+      "bean-scene": '#603809',
 
 
 

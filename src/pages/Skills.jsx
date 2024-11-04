@@ -122,14 +122,14 @@ const Skills = () => {
             <div className='fixed top-0 right-0 z-40 right-anim'>
                 <Menu colorIcon="stroke-blue-text" colorMenu="bg-blue-text border-2 border-blue-text hover:border-brownl" activeSkills="bg-opacity-40 border-none bg-blue-lighte text-dark cursor-default" />
             </div>
-            <div className='flex pt-[50px]  xl:mx-[86px] gap-[18px] overflow-auto flex-col lg:flex-row justify-center  '>
+            <div className='flex pt-[50px]  xl:mx-[86px] gap-[18px]  flex-col lg:flex-row justify-center overflow-hidden '>
                 <div className='flex flex-col  items-center bg-blue-dark opacity-80  max-h-max rounded-3xl  pb-6 secondleft-anim '>
                     <p className='piecefonts text-white text-[64px]'>Skills</p>
-                    <div className='flex flex-col gap-[10px]  max-h-[750px] md:flex-wrap overflow-y-auto w-full custom-scroll px-3 md:px-6'>
+                    <div className='flex flex-col gap-[10px]  max-h-[750px] md:flex-wrap overflow-y-auto w-full custom-scroll  md:w-[658px] px-3 md:px-6 '>
                         {cardList.sort(sortCards).map(card => (
                             <div
                                 key={card.id}
-                                className='bg-blue-lighte p-4  cursor-grab inline-flex flex-row rounded-3xl hover:rounded-md duration-300 ease-in-out transition-all gap-[18px] border-box '
+                                className='bg-blue-lighte p-4 md:w-[300px]  cursor-grab inline-flex flex-row rounded-3xl hover:rounded-md duration-300 ease-in-out transition-all gap-[18px] border-box '
                                 draggable={true}
                                 onDragStart={(e) => dragStartHandler(e, card)}
                                 onDragLeave={(e) => dragEndHandler(e)}
@@ -147,13 +147,13 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div className='flex  left-anim flex-col bg-blue-dark  opacity-80 rounded-3xl  px-3 md:px-6 pb-6  items-center max-h-max '>
+                <div className='flex  left-anim flex-col md:w-full bg-blue-dark  opacity-80 rounded-3xl  px-3 md:px-6 pb-6  items-center max-h-max '>
                     <p className='piecefonts text-white text-[64px]'>DESIGNS</p>
-                    <div className='flex flex-col gap-[10px] max-h-[790px] md:max-h-[490px] md:flex-wrap lg:max-h-[790px] lg:flex-nowrap  rounded-3xl '>
+                    <div className='flex flex-col gap-[10px] max-h-[790px] md:max-h-[490px] md:flex-wrap lg:max-h-[790px] overflow-y-auto lg:flex-nowrap  rounded-3xl w-full lg:max-w-[320px] '>
                         {designList.sort(sortDesigns).map(design => (
                             <div
                                 key={design.id}
-                                className='bg-blue-lighte p-4 cursor-grab inline-flex flex-row rounded-3xl gap-[18px] border-box hover:rounded-md duration-300 ease-in-out transition-all  '
+                                className='bg-blue-lighte p-4  cursor-grab inline-flex flex-row rounded-3xl gap-[18px] border-box hover:rounded-md duration-300 ease-in-out transition-all  '
                                 draggable={true}
                                 onDragStart={(e) => dragStartDesignHandler(e, design)}
                                 onDragLeave={(e) => dragEndDesignHandler(e)}
@@ -163,9 +163,9 @@ const Skills = () => {
                             >
                                 <div className='flex items-center justify-center min-w-10'> <img src={design.logo} alt="logo" /></div>
 
-                                <div className='flex flex-col njfonts max-w-[280px] '>
-                                    <p className='text-2xl text-blue-text '> {design.title}</p>
-                                    <p className='aboutskills text-white'>{design.text}</p>
+                                <div className='flex flex-col njfonts md:w-full lg:max-w-[280px] '>
+                                    <p className='text-2xl text-blue-text lg:w-full '> {design.title}</p>
+                                    <p className='aboutskills text-white lg:w-full'>{design.text}</p>
                                 </div>
 
                             </div>
