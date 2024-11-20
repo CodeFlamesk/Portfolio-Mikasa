@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-module.exports = {
+export default {
   content: [
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
@@ -8,57 +8,33 @@ module.exports = {
     './src/**/*.{js,jsx}',
   ],
   theme: {
-
     extend: {
-      screens: {
-        'h-850': { 'raw': '(max-height: 850px)' },
-        'h-720': { 'raw': '(max-height: 719px)' },
-      },
-      lineHeight: {
-
-      },
-      transformStyle: {
-        'preserve-3d': 'preserve-3d',
-
-      },
+      lineHeight: {},
       borderColor: ['focus', 'valid', 'invalid'],
       outlineColor: ['focus', 'valid', 'invalid'],
-
-
+      screens: {},
+      fontSize: {},
+      spacing: {},
+      borderRadius: {},
     },
-
     colors: {
-
-
-      "purple": "#A46286",
-      "white": "#FFFFFF",
+      "light-col": "#222222",
+      "purple": "#7247CA",
+      "hov-purple": "#58379B",
+      "br-gray": "#EAEAEE",
+      "gray": "#F5F5F7",
+      "apple-gray": "#A3AAAE",
+      "gray-light": "#979797",
+      "twitter": "#1DA1F2",
+      "linkedIn": "#0A66C2",
       "black": "#000000",
-      "pink": "#F98C96",
-      "brown-dark": "#BE9965",
-      "brownl": "#FEDA7A",
-      "blue-dark": '#0B4D72',
-      "blue-lighte": '#106696',
-      "blue-text": '#05C4F9',
-      "orange-border": '#FFA718',
-      "blue-input": '#0D87D0',
-      "blue-card": '#0F97A0',
-      "purple-card": '#302D62',
-      "purple-blue-card": '#160F76',
-      "grey-card": '#ECEEEE',
-      "dark": '#131212',
-      "brown-black": '#340C0C',
-      "viber-bg": '#7B519D',
-      "telegram-bg": '#2EA6D9',
-      "pink-lighte": '#E3878B',
-      "bean-scene": '#603809',
-
-
-
+      "icon-gray": "#555555",
+      "white": "#FFFFFF",
+      "facebook": "#17A9FD",
+      "green": "#4CB051",
+      "red": "#fe0000",
     },
-
   },
   plugins: [],
   variants: {},
-
-}
-
+};

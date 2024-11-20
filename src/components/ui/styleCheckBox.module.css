@@ -1,0 +1,163 @@
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin: 8px 0;
+
+    padding-left: 26px;
+}
+
+.checkbox-wrapper-buy {
+    display: flex;
+
+    cursor: pointer;
+    position: relative;
+    margin: 8px 0;
+    align-items: center;
+    padding-left: 26px;
+
+}
+
+
+
+
+
+.checkbox-element-buy {
+    appearance: none;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #E2E8F0;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.checkbox-element {
+    appearance: none;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #050607;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.checkbox-wrapper:hover .checkbox-element {
+    border-color: #7247CA;
+
+}
+
+.checkbox-element-buy:checked {
+    background-color:#7247CA;
+    border-color:#7247CA;
+
+}
+
+.checkbox-element:checked {
+    background-color:#7247CA;
+    border-color:#7247CA;
+
+}
+
+.checkbox-element:checked::before {
+    content: "";
+    cursor: pointer;
+    display: block;
+    width: 5px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0px;
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    transform: rotate(45deg);
+}
+
+.checkbox-element-buy:checked::before {
+    content: "";
+    cursor: pointer;
+    display: block;
+    width: 5px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0px;
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    transform: rotate(45deg);
+}
+
+.checkbox-reating-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin: 8px 0;
+
+
+}
+
+.checkbox-reating-element {
+    appearance: none;
+
+    position: absolute;
+    align-items: center;
+    left: 0;
+    margin: 0;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.checkbox-reating-wrapper:hover .checkbox-element {
+    border-color: #7247CA;
+
+}
+
+
+
+
+.checkbox-reating-element:checked::before {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 22px;
+    background: rgba(63, 210, 43, 0.2);
+    border-radius: 5px;
+    position: absolute;
+    top: -11px;
+    left: -3px;
+    box-shadow: 0 0 10px rgba(49, 210, 43, 0.5);
+    z-index: 11;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkbox-reating-element:not(:checked):hover::before {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 22px;
+    background: rgba(43, 166, 210, 0.2);
+
+    border-radius: 5px;
+
+    position: absolute;
+    top: -11px;
+    left: -3px;
+    box-shadow: 0 0 10px rgba(43, 168, 210, 0.5);
+
+    z-index: 11;
+
+    transition: all 0.3s ease-in-out;
+}
