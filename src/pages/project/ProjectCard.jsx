@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import projectCardBackground from '/projectCardImg/projectCardBackground.webp';
 import byWayLogo from '/projectCardImg/byWayLogo.webp';
+import castPress from '/projectCardImg/CastPress.webp';
 import proHouse from '/projectCardImg/proHouse.webp';
 import nftLogo from '/projectCardImg/nftLogo.webp';
 import wishbone from '/projectCardImg/wishbone.webp';
@@ -10,6 +11,7 @@ import ProjectCategories from './ProjectCategories';
 import audiona from '@components/Player/music/projectcard.mp3';
 import AudioPlayer from '@components/Player/Player';
 import Menu from '@components/Menu';
+
 import { gsap } from 'gsap';
 const ProjectCard = () => {
     const [currentItems, setCurrentItems] = useState([]);
@@ -25,10 +27,11 @@ const ProjectCard = () => {
     }, []);
     const items = [
         { id: 1, img: byWayLogo, category: 'multi', bgcolor: 'bg-blue-card', href: 'https://learning-management-system-steel.vercel.app/' },
+        { id: 2, img: castPress, category: 'multi', bgcolor: 'bg-white', href: 'https://cast-press-trbn.vercel.app/' },
         { id: 3, img: nftLogo, category: 'multi', bgcolor: 'bg-purple-blue-card', href: 'https://codeflamesk.github.io/NFT-Marketplace/home.html' },
-        { id: 2, img: proHouse, category: 'landing', bgcolor: 'bg-purple-card', href: 'https://codeflamesk.github.io/ProHouse/home.html' },
-        { id: 4, img: wishbone, category: 'landing', bgcolor: 'bg-grey-card', href: 'https://codeflamesk.github.io/Wishbone__project/home.html' },
+        { id: 4, img: proHouse, category: 'landing', bgcolor: 'bg-purple-card', href: 'https://codeflamesk.github.io/ProHouse/home.html' },
         { id: 5, img: beanScene, category: 'landing', bgcolor: 'bg-bean-scene', href: 'https://bean-scene-ebon.vercel.app/' },
+        { id: 6, img: wishbone, category: 'landing', bgcolor: 'bg-grey-card', href: 'https://codeflamesk.github.io/Wishbone__project/home.html' },
     ];
 
     useEffect(() => {
