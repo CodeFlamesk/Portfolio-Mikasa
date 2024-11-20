@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import projectCardBackground from '/projectCardImg/projectCardBackground.webp';
+import projectCardBackground from '/projectCardImg/projectCardBackground.jpeg';
 import byWayLogo from '/projectCardImg/byWayLogo.webp';
 import castPress from '/projectCardImg/CastPress.webp';
 import proHouse from '/projectCardImg/proHouse.webp';

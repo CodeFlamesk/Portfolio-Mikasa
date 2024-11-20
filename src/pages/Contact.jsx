@@ -1,6 +1,6 @@
 
 import AudioPlayer from '@components/Player/Player';
-import contactBackground from '/contactImg/contactBackground.webp';
+import contactBackground from '/contactImg/contactBackground.jpeg';
 import audiona from '@components/Player/music/contact.mp3';
 import Menu from '@components/Menu';
 import { useEffect } from 'react';

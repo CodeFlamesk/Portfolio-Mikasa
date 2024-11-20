@@ -1,5 +1,5 @@
 
-import aboutBackground from '/aboutImg/aboutBackground.webp';
+import aboutBackground from '/aboutImg/aboutBackground.jpeg';
 import React, { useEffect } from 'react';
 
 import AudioPlayer from '@components/Player/Player';

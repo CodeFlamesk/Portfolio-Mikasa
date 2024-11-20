@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import narutoBackground from '/projectImg/narutoBackground.webp';
+import narutoBackground from '/projectImg/narutoBackground.jpeg';
 import AudioPlayer from '@components/Player/Player';
 import audiona from '@components/Player/music/naruto.mp3';
 import Menu from '@components/Menu';
