@@ -1,4 +1,4 @@
-# Portfolio – My Project Showcase  
+# Portfolio
 Link: https://portfolio-mikasa.vercel.app/
 ## About the Project  
 
