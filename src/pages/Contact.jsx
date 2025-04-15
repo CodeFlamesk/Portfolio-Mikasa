@@ -45,15 +45,15 @@ const Contact = () => {
 
                     <div className='flex pt-6 md:pt-[75px] justify-center flex-wrap gap-8 md:gap-[70px]   md:mb-[90px] h-720:mb-[24px] mx-3 '>
 
-                        <a href="https://www.upwork.com/freelancers/~01a687c8f95b7913d7 " target="_blank" rel="noopener noreferrer" className='flex items-center justify-center w-10 h-10 z-40 bg-telegram-bg rounded-full hover:bg-pink-lighte duration-300 transition-all ease-in-out '    > <img src="/contactImg/telegram.webp" alt="logo-contact" /></a>
+                         <a href="https://t.me/Mikasa_dev" target="_blank" rel="noopener noreferrer" className='flex items-center justify-center w-10 h-10 z-40 bg-telegram-bg rounded-full hover:bg-pink-lighte duration-300 transition-all ease-in-out '    > <img src="/contactImg/telegram.webp" alt="logo-contact" /></a>
 
-                        <a href="https://www.upwork.com/freelancers/~01a687c8f95b7913d7" target="_blank" className='flex items-center justify-center w-10 h-10 z-40 bg-brown-black rounded-full   hover:bg-pink-lighte duration-300 transition-all ease-in-out '> <img src="/contactImg/google.webp" alt="logo-contact" /></a>
+                        <a href="mailto:volodymyr.kravets.dev@gmail.com" target="_blank" className='flex items-center justify-center w-10 h-10 z-40 bg-brown-black rounded-full   hover:bg-pink-lighte duration-300 transition-all ease-in-out '> <img src="/contactImg/google.webp" alt="logo-contact" /></a>
 
-                        <a href="https://www.upwork.com/freelancers/~01a687c8f95b7913d7" target="_blank" className='flex items-center justify-center w-10 h-10 z-40 bg-viber-bg rounded-full   hover:bg-pink-lighte duration-300 transition-all ease-in-out '> <img src="/contactImg/viber.webp" alt="logo-contact" /></a>
+                        <a href="viber://chat?number=%2B380957066063" target="_blank" className='flex items-center justify-center w-10 h-10 z-40 bg-viber-bg rounded-full   hover:bg-pink-lighte duration-300 transition-all ease-in-out '> <img src="/contactImg/viber.webp" alt="logo-contact" /></a>
 
-                        <a href="https://www.upwork.com/freelancers/~01a687c8f95b7913d7" target="_blank" className='flex items-center justify-center z-40 w-10 h-10 bg-brown-black rounded-full   hover:bg-pink-lighte duration-300 transition-all ease-in-out '> <img src="/contactImg/discord.webp" alt="logo-contact" /></a>
+                        <a href="https://discord.com/users/539154775413882892" target="_blank" className='flex items-center justify-center z-40 w-10 h-10 bg-brown-black rounded-full   hover:bg-pink-lighte duration-300 transition-all ease-in-out '> <img src="/contactImg/discord.webp" alt="logo-contact" /></a>
 
-                        <a href="https://www.upwork.com/freelancers/~01a687c8f95b7913d7" target="_blank" className='flex items-center justify-center w-10 h-10 z-40 bg-brown-black rounded-full  hover:bg-pink-lighte duration-300 transition-all ease-in-out  '> <img src="/contactImg/github.webp" alt="logo-contact" /></a>
+                        <a href="https://github.com/CodeFlamesk" target="_blank" className='flex items-center justify-center w-10 h-10 z-40 bg-brown-black rounded-full  hover:bg-pink-lighte duration-300 transition-all ease-in-out  '> <img src="/contactImg/github.webp" alt="logo-contact" /></a>
 
                     </div>
                 </div>
